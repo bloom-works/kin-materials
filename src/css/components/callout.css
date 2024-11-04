@@ -1,0 +1,101 @@
+/* Callout theming */
+
+.callout {
+  position: relative;
+  border-radius: var(--radius);
+  container-type: inline-size;
+
+/* There should be an empty space before custom properties per CSS linter rules */
+  --callout-bg: var(--c-accent-light);
+  --callout-accent: var(--c-accent);
+}
+
+.callout[data-type="warning"] {
+  --callout-bg: #f5e0e0;
+  --callout-accent: #97312f;
+}
+
+
+.callout[data-type="pep-talk"] {
+  --callout-bg: #fff0f6;
+  --callout-accent: #ff3381;
+}
+
+.callout[data-type="event"] {
+  --callout-bg: #eef3fc;
+  --callout-accent: #194182;
+}
+
+/*
+  Backgrounds and borders are on pseudo-elements
+  so they can be distorted by SVG filters
+  independently from their contents
+*/
+
+.callout::before,
+.callout::after,
+.callout-inner::before,
+.callout-icon::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  z-index: -1;
+}
+
+.callout::before {
+  background-color: var(--callout-bg);
+}
+
+.callout::after {
+  border-radius: var(--radius);
+  opacity: 0.3;
+  border: 1px solid var(--callout-accent);
+}
+
+.callout-icon::before {
+  /* There should be an empty space before custom properties per CSS linter rules */
+  background: var(--callout-accent);
+}
+
+/* Basic layout */
+
+.callout-inner {
+  display: flex;
+  gap: var(--g-column-gap);
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+}
+
+@container (min-inline-size: 20em) {
+  .callout-inner {
+    flex-direction: row;
+  }
+}
+
+.callout-icon {
+  padding: var(--t-leading-em);
+  border-radius: var(--radius);
+  flex: none;
+  position: relative;
+  color: var(--c-accent-text);
+}
+
+.callout-icon svg {
+  inline-size: 1rem;
+  aspect-ratio: 1 / 1;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* Optically adjusting icons
+   within their container */
+
+.callout[data-type="warning"] svg {
+  transform: scale(1.5);
+}
+
+.callout[data-type="pep-talk"] svg {
+  transform: translateY(7%);
+}
