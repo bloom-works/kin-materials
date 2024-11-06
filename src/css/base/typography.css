@@ -21,7 +21,7 @@ iframe {
 */
 
 :root {
-  font-size: clamp(1rem, calc(-1rem + 4vw), 1.25rem);
+  font-size: clamp(1.125rem, calc(-1rem + 4vw), 1.5rem);
 }
 
 /* Base style */
@@ -49,7 +49,8 @@ b, strong {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-primary);
+  font-weight: 300;
   color: var(--c-headline);
   margin-inline: 0;
   margin-block-end: var(--t-paragraph);
@@ -57,29 +58,22 @@ h1, h2, h3, h4, h5, h6,
   padding: 0;
 }
 
+h2, h3, h4, h5, h6,
+.h2, .h3, .h4, .h5, .h6 {
+/*  font-family: var(--font-heading);*/
+}
+
 a {
   text-decoration-color: rgb(var(--c-link-text-rgb, var(--c-accent-dark-rgb)) / 60%);
   color: var(--c-link-text, var(--c-accent-text));
   text-decoration-thickness: 0.0625em;
+  text-underline-offset: 0.15em;
   text-decoration-skip-ink: all;
-}
-
-h2 a {
-  text-decoration: none;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
-  text-decoration-thickness: 0.125em;
-}
-
-h1, h2, h3, h4, h5,
-.h1, .h2, .h3, .h4, .h5 {
-  font-weight: var(--t-bold);
-}
-
-h6, .h6, dt {
-  font-weight: var(--t-normal);
+  text-decoration-thickness: 1px;
 }
 
 h1, .h1,
@@ -96,17 +90,9 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: var(--t-large);
-  text-decoration: underline;
-  text-decoration-thickness: 0.125em;
-  text-decoration-color: var(--c-accent);
-  text-underline-offset: 0.3125em;
   margin-block-start: 2.5em;
 
   --l-stack-gap: calc(var(--t-paragraph) * 2.5);
-}
-
-h2:has(a:hover, a:focus) {
-  text-decoration-thickness: 0.1875em;
 }
 
 h3, .h3 {

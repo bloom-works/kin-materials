@@ -1,5 +1,5 @@
 table {
-	max-inline-size: unset;
+	max-inline-size: 85%;
   position: relative;
 }
 
@@ -17,8 +17,13 @@ th {
 	vertical-align: middle;
 }
 
+th:first-child {
+  border-start-start-radius: var(--radius);
+}
+
 th:last-child {
   border-inline-end: 0;
+  border-start-end-radius: var(--radius);
 }
 
 td {
@@ -29,6 +34,7 @@ td {
 @media screen and (width <= 45rem) {
   table {
     border: 0;
+    max-inline-size: 100%;
   }
 
   /* Visually hide the table head while still

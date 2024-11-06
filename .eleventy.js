@@ -2,6 +2,7 @@ const pluginTOC = require('eleventy-plugin-nesting-toc');
 const markdownLibrary = require('./markdown');
 
 const CalloutComponent = require('./src/_includes/components/Callout');
+const ChecklistComponent = require('./src/_includes/components/Checklist');
 const DefinitionComponent = require('./src/_includes/components/Definition');
 
 
@@ -21,6 +22,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownLibrary);
 
   eleventyConfig.addPairedShortcode('Callout', CalloutComponent);
+  eleventyConfig.addPairedShortcode('Checklist', ChecklistComponent);
   eleventyConfig.addPairedShortcode('Definition', DefinitionComponent);
 
 
