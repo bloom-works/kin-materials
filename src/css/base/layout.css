@@ -161,6 +161,7 @@ var(--stack-layout-gap) within specific components.
 .l-sidebar > :first-child {
   flex-basis: var(--l-sidebar-width);
   flex-grow: 1;
+  max-inline-size: unset;
 }
 
 .l-sidebar > :last-child {
