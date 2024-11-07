@@ -1,0 +1,33 @@
+---
+permalink: /bootstrap-icons.svg
+icons:
+  - bank
+  - box-arrow-up-right
+  - check-circle
+  - cloud-download
+  - exclamation-circle
+  - file-earmark-arrow-down
+  - globe2
+  - info-circle
+  - link-45deg
+  - mailbox-flag
+  - pen
+  - question-circle
+  - telephone
+  - x-circle
+---
+
+{#
+  All icons in /_includes/icon-paths/
+  are copied from icons.getbootstrap.com,
+  with the <svg> tags manually removed
+  since they're not necessary for this sprite.
+ #}
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  {% for icon in icons %}
+    <symbol viewBox="0 0 16 16" id="{{ icon }}">
+      {% include "icon-paths/" + icon + ".svg" ignore missing %}
+    </symbol>
+  {% endfor %}
+</svg>
