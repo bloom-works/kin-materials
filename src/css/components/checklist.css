@@ -1,18 +1,29 @@
-.checklist :is(ul, li) {
-  margin: 0;
-  padding: 0;
+.checklist {
+  --list-padding: 1.5em;
 }
 
-.checklist ul li {
+.checklist :is(ul, li) {
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
+.checklist ul {
   list-style-type: none;
-  padding-inline-start: 3rem;
+  padding-inline-start: var(--list-padding);
   margin-block-end: var(--t-paragraph);
+}
+
+.checklist li {
   position: relative;
 }
 
-.checklist ul li::before {
+/*.checklist ul ul {
+  --list-padding: 3em;
+}*/
+
+.checklist li::before {
   content: "▢";
   position: absolute;
   inset-block-start: 0;
-  inset-inline-start: 0;
+  inset-inline-start: calc(var(--list-padding) * -1);
 }

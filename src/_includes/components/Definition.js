@@ -7,8 +7,7 @@ function renderDefinition (content, term) {
   return html`
     <div>
       <dt>${term}</dt>
-      <dd>
-        <div class="l-stack-basic">${text}</div></dd>
+      <dd>${text}</dd>
     </div>
   `
 }

@@ -1,38 +1,37 @@
 const { html } = require('common-tags');
 const markdown = require('../../../markdown');
 
-function renderCallout (content, type) {
+function renderCallout (content, type = 'note', title) {
   const text = markdown.render(content);
 
   let icon = '';
-  let title = '';
 
   switch (type) {
     case 'event':
       icon = 'calendar-week';
-      title = 'Upcoming event';
       break;
-    case 'pep-talk':
-      icon = 'heart';
-      title = 'A pep talk';
+    case 'apply':
+      icon = 'pen';
+      title = 'How to apply';
       break;
     case 'warning':
-      icon = 'exclamation';
+      icon = 'exclamation-circle';
       title = 'Warning';
       break;
-    default:
-      icon = 'lightbulb';
-      title = 'Important information';
+    case 'note':
+      icon = 'info-circle';
+      title = 'Note';
   }
 
   return html`
-    <section class='l-section callout' data-type='${type || 'info'}'>
-      <div class='callout-inner'>
-        <span class='callout-icon'>
+    <section class='callout' data-type='${type || 'info'}'>
+      <header>
           <svg title='${title}' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 16 16'>
             <use xlink:href='/bootstrap-icons.svg#${icon}'></use>
           </svg>
-        </span>
+          <span>${title}</span>
+      </header>
+      <div class='callout-inner'>
         <div class='l-stack-basic'>${text}</div>
       </div>
     </section>

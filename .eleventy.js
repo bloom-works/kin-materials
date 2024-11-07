@@ -2,8 +2,10 @@ const pluginTOC = require('eleventy-plugin-nesting-toc');
 const markdownLibrary = require('./markdown');
 
 const CalloutComponent = require('./src/_includes/components/Callout');
-const ChecklistComponent = require('./src/_includes/components/Checklist');
 const DefinitionComponent = require('./src/_includes/components/Definition');
+const DownloadComponent = require('./src/_includes/components/Download');
+const IconListItemComponent = require('./src/_includes/components/IconListItem');
+const LawLinkComponent = require('./src/_includes/components/LawLink');
 
 
 module.exports = function (eleventyConfig) {
@@ -22,9 +24,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownLibrary);
 
   eleventyConfig.addPairedShortcode('Callout', CalloutComponent);
-  eleventyConfig.addPairedShortcode('Checklist', ChecklistComponent);
   eleventyConfig.addPairedShortcode('Definition', DefinitionComponent);
-
+  eleventyConfig.addPairedShortcode('Download', DownloadComponent);
+  eleventyConfig.addPairedShortcode('IconListItem', IconListItemComponent);
+  eleventyConfig.addShortcode('LawLink', LawLinkComponent);
 
   const md = require("markdown-it")({
     html: false,

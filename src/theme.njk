@@ -11,4 +11,96 @@ permalink: css/app.css
 
 {% include "./css/components/callout.css" %}
 {% include "./css/components/checklist.css" %}
+{% include "./css/components/definition.css" %}
+{% include "./css/components/download.css" %}
+{% include "./css/components/icon-list.css" %}
+{% include "./css/components/law-link.css" %}
 {% include "./css/components/table.css" %}
+{% include "./css/components/toc.css" %}
+
+
+@media print {
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+  --l-stack-gap: 0.5em;
+
+  table {
+  	border-collapse: collapse;
+  	width: 100%;
+  }
+
+  a, canvas, img {
+  	color: inherit;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+  	page-break-after: avoid;
+  }
+
+  h2 a, h3 a {
+  	  text-decoration: none;
+  }
+
+  a, blockquote, canvas, details, dl, figure, img, ol, picture, svg, table, ul, .callout {
+		break-inside: avoid;
+		page-break-inside: avoid;
+  }
+
+  p, pre, table {
+  	orphans: 4;
+  	widows: 4;
+  }
+
+  a {
+  	word-wrap: break-word;
+  }
+
+  a[href^='http']:after, a[href^='ftp']:after {
+	content: ": " attr(href);
+  }
+  
+	* {
+		max-inline-size: 8in;
+		background-color: tranparent;
+	}
+
+	.l-wrapper,
+	.l-text-wrapper {
+		inline-size: unset;
+		max-inline-size: 8in;
+	}
+
+	.callout header,
+	.callout-inner {
+		background: transparent;
+		border: 1px solid #000;
+		box-shadow: none;
+		color: #000;
+	}
+
+	.callout header {
+		border-block-end-width: 0;
+	}
+
+	td {
+		border-color: #666;
+	}
+
+	th {
+		color: #000;
+		background: transparent;
+		border: 1px solid #666;
+	}
+
+	th:last-child {
+		border-inline-end: 1px solid #666;
+	}
+}
+
+@page {
+	margin: 0.75in;
+}

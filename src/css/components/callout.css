@@ -2,100 +2,66 @@
 
 .callout {
   position: relative;
+  margin-block-start: var(--t-paragraph);
   border-radius: var(--radius);
-  container-type: inline-size;
-
+  box-shadow: 0 1px 0.5em rgba(0,0,0,0.08), 0 1px 3px rgb(0 0 0 / 0.06);
 /* There should be an empty space before custom properties per CSS linter rules */
-  --callout-bg: var(--c-accent-light);
-  --callout-accent: var(--c-accent);
+  --callout-bg: var(--c-purple-100);
+  --callout-accent: var(--c-purple-300);
+  --callout-header-bg: var(--c-purple-600);
+  --callout-header-text: #fff;
+  --callout-border: var(--callout-accent);
+  break-inside: avoid-page;
 }
 
 .callout[data-type="warning"] {
-  --callout-bg: #f5e0e0;
-  --callout-accent: #97312f;
+  --callout-bg: var(--c-orange-100);
+  --callout-accent: var(--c-orange-300);
+  --callout-header-bg: var(--c-orange-600);
 }
 
-
-.callout[data-type="pep-talk"] {
-  --callout-bg: #fff0f6;
-  --callout-accent: #ff3381;
+.callout[data-type="apply"] {
+  --callout-bg: #fff;
+  --callout-accent: #aaa;
+  --callout-header-bg: #f7f7f7;
+  --callout-header-text: var(--c-text);
 }
 
-.callout[data-type="event"] {
-  --callout-bg: #eef3fc;
-  --callout-accent: #194182;
-}
-
-/*
-  Backgrounds and borders are on pseudo-elements
-  so they can be distorted by SVG filters
-  independently from their contents
-*/
-
-.callout::before,
-.callout::after,
-.callout-inner::before,
-.callout-icon::before {
-  position: absolute;
-  content: "";
-  inset: 0;
-  z-index: -1;
-}
-
-.callout::before {
-  background-color: var(--callout-bg);
-}
-
-.callout::after {
-  border-radius: var(--radius);
-  opacity: 0.3;
+.callout[data-type="apply"] header {
   border: 1px solid var(--callout-accent);
 }
 
-.callout-icon::before {
-  /* There should be an empty space before custom properties per CSS linter rules */
-  background: var(--callout-accent);
+.callout header {
+  background: var(--callout-header-bg);
+  color: var(--callout-header-text);
+  padding: 0.25em 0.5em;
+  border-start-start-radius: var(--radius);
+  border-start-end-radius: var(--radius);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.callout header > svg {
+  inline-size: 1em;
+  aspect-ratio: 1 / 1;
 }
 
 /* Basic layout */
 
 .callout-inner {
-  display: flex;
-  gap: var(--g-column-gap);
-  flex-direction: column;
-  align-items: start;
-  position: relative;
+  padding: 0.75em 0.5em;
+  background: #fff;
+  border-end-start-radius: var(--radius);
+  border-end-end-radius: var(--radius);
+  border: 1px solid var(--callout-border);
+  border-block-start-width: 0px;
 }
 
-@container (min-inline-size: 20em) {
-  .callout-inner {
-    flex-direction: row;
+@media print {
+  .callout-header {
+    border: 1px solid var(--callout-border);
+    border-block-end-width: 0;
+    color: #000;
   }
-}
-
-.callout-icon {
-  padding: var(--t-leading-em);
-  border-radius: var(--radius);
-  flex: none;
-  position: relative;
-  color: var(--c-accent-text);
-}
-
-.callout-icon svg {
-  inline-size: 1rem;
-  aspect-ratio: 1 / 1;
-  display: block;
-  position: relative;
-  z-index: 2;
-}
-
-/* Optically adjusting icons
-   within their container */
-
-.callout[data-type="warning"] svg {
-  transform: scale(1.5);
-}
-
-.callout[data-type="pep-talk"] svg {
-  transform: translateY(7%);
 }

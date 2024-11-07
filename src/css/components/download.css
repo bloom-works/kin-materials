@@ -1,0 +1,55 @@
+
+/* Download links */
+
+.download {
+  position: relative;
+  margin-block-start: var(--t-paragraph);
+  border-radius: var(--radius);
+  background: var(--c-purple-500);
+  color: #fff;
+  box-shadow: 0 1px 0.5em rgba(0,0,0,0.08), 0 1px 3px rgb(0 0 0 / 0.06);
+  padding: 0.75em;
+  border-radius: var(--radius);
+  border: 1px solid var(--c-purple-300);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  inline-size: fit-content;
+  transition: all 0.12s ease-out;
+}
+
+.download a {
+  color: currentColor;
+  text-decoration: none;
+  text-decoration-thickness: 0;
+}
+
+.download svg {
+  color: var(--c-purple-200);
+  inline-size: 1.5rem;
+  aspect-ratio: 1 / 1;
+  flex: none;
+}
+
+.download:hover,
+.download:focus {
+  transform: scale(1.01);
+  background: var(--c-purple-600);
+}
+
+.download:active {
+  transform: scale(0.99);
+}
+
+.callout-download .callout-inner {
+/*  background: transparent;*/
+}
+
+.download-group {
+  --l-cluster-gap: 0.5rem;
+}
+
+.download-group .download {
+  margin: 0;
+}

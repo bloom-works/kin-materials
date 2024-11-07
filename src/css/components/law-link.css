@@ -1,0 +1,6 @@
+.law-link {
+  display: inline;
+  background: var(--c-purple-100);
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 0.25em var(--c-purple-100);
+}

@@ -10,11 +10,18 @@
     <link rel="stylesheet" href="{{ '/css/app.css' | url }}">
   </head>
   <body>
-    <div class="l-wrapper">
-      <h1>{{ title }}</h1>
-
-      <div class="l-stack-basic">        
-        {{ content | safe }}
+    <div class="container">
+      <div class="l-wrapper">
+        <h1>{{ title }}</h1>
+        <div class="l-sidebar">
+          <aside class="toc">
+            <h2 class="h4">Table of Contents</h2>
+            {{ content | toc | safe }}
+          </aside>
+            <section class="l-stack-basic {{ class }}">        
+              {{ content | safe }}
+            </section>
+          </div>
       </div>
     </div>
   </body>

@@ -8,6 +8,7 @@
 .l-text-wrapper {
   inline-size: var(--w-container);
   margin: 0 auto;
+  container-type: inline-size;
 }
 
 .l-wrapper {
@@ -125,7 +126,7 @@ var(--stack-layout-gap) within specific components.
 .l-cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--cluster-gap, var(--g-column-gap));
+  gap: var(--l-cluster-gap, var(--g-column-gap));
 }
 
 /* Padded sections */
@@ -166,7 +167,7 @@ var(--stack-layout-gap) within specific components.
   flex-basis: 0;
   flex-grow: 999;
   min-inline-size: var(--l-sidebar-content-width);
-  max-inline-size: var(--t-measure);
+  max-inline-size: var(--w-content-max);
 }
 
 /* Creating a sticky footer */

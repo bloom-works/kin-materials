@@ -10,7 +10,7 @@
   --t-large: 1.602rem;
   --t-medium: 1.424rem;
   --t-base: 1.125rem;
-  --t-small: 1rem;
+  --t-small: 0.875rem;
 
   /* Line heights */
   --t-leading: 1.4;
@@ -30,7 +30,7 @@
   --c-secondary: #555;
 
   /* Standard border radius  */
-  --radius: 2px;
+  --radius: 4px;
 
   /* Main Colors */
 
