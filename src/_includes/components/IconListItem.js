@@ -2,7 +2,7 @@ const { html } = require('common-tags');
 const markdown = require('../../../markdown');
 
 function renderIconListItemYes (content, icon, color = "#999") {
-  const text = markdown.render(content);
+  const text = markdown.renderInline(content);
 
   switch (icon) {
     case 'yes':

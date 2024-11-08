@@ -1,4 +1,4 @@
-const { html } = require('common-tags');
+const { html, stripIndents } = require('common-tags');
 const markdown = require('../../../markdown');
 
 function renderCallout (content, type = 'note', title) {
@@ -23,7 +23,7 @@ function renderCallout (content, type = 'note', title) {
       title = 'Note';
   }
 
-  return html`
+  let output = html`
     <section class='callout' data-type='${type || 'info'}'>
       <header>
           <svg title='${title}' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 16 16'>
@@ -31,11 +31,12 @@ function renderCallout (content, type = 'note', title) {
           </svg>
           <span>${title}</span>
       </header>
-      <div class='callout-inner'>
-        <div class='l-stack-basic'>${text}</div>
-      </div>
+      <div class='callout-inner'>${text}</div>
     </section>
   `
+  
+  return stripIndents`${output}`;
 }
+
 
 module.exports = renderCallout;
