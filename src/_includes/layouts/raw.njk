@@ -54,7 +54,154 @@
 
     <script src="./Kinship Licensing _ Washington State Department of Children, Youth, and Families_files/modernizr.min.js"></script>
 
-  <link type="text/css" rel="stylesheet" charset="UTF-8" href="./Kinship Licensing _ Washington State Department of Children, Youth, and Families_files/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="./Kinship Licensing _ Washington State Department of Children, Youth, and Families_files/m=el_main"></script><link href="./Kinship Licensing _ Washington State Department of Children, Youth, and Families_files/f479fb1064.css" media="all" rel="stylesheet"></head>
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="./Kinship Licensing _ Washington State Department of Children, Youth, and Families_files/m=el_main_css"><script type="text/javascript" charset="UTF-8" src="./Kinship Licensing _ Washington State Department of Children, Youth, and Families_files/m=el_main"></script><link href="./Kinship Licensing _ Washington State Department of Children, Youth, and Families_files/f479fb1064.css" media="all" rel="stylesheet">
+
+<style>
+{% include "../../css/base/root.css" %}
+:root {
+  --t-paragraph: 15px;
+}
+{% include "../../css/base/layout.css" %}
+
+{% include "../../css/components/callout.css" %}
+{% include "../../css/components/checklist.css" %}
+{% include "../../css/components/definition.css" %}
+{% include "../../css/components/download.css" %}
+{% include "../../css/components/icon-list.css" %}
+
+.callout, .download, .icon-list {
+  margin-block-end: 3rem;
+}
+
+.callout header {
+  padding: 1rem 1.5rem;
+  gap: 1.5rem;
+}
+
+.callout-inner {
+  padding-inline: 1.5rem;
+}
+
+.callout header > svg {
+  inline-size: 3rem;
+}
+
+.icon-list li, .download {
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+:is(.icon-list, .callout, .download) p:last-child {
+  padding-block-end: 0;
+}
+
+:is(.icon-list, .download) svg {
+  inline-size: 3rem;
+}
+
+
+@media print {
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  #banner,
+  #block-megamenu,
+  .slideout-toggle,
+  #content-top,
+  .region-sidebar-first,
+  #block-fpfeatured {
+    display: none;
+  }
+
+  --l-stack-gap: 0.5em;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  a, canvas, img {
+    color: inherit;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  h2 a, h3 a {
+      text-decoration: none;
+  }
+
+  a, blockquote, canvas, details, dl, figure, img, ol, picture, svg, table, ul, .callout {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  p, pre, table {
+    orphans: 4;
+    widows: 4;
+  }
+
+  a {
+    word-wrap: break-word;
+  }
+
+  body:before {
+    content: "Washington State Department of Children, Youth and Families";
+  }
+
+  a[href^='http']:after, a[href^='ftp']:after {
+  content: ": " attr(href);
+  }
+  
+  * {
+    max-inline-size: 8in;
+    background-color: tranparent;
+  }
+
+  .l-wrapper,
+  .l-text-wrapper,
+  .main-content__container * {
+    inline-size: unset;
+    max-inline-size: 8in;
+  }
+
+  .callout header,
+  .callout-inner {
+    background: transparent;
+    border: 1px solid #000;
+    box-shadow: none;
+    color: #000;
+  }
+
+  .callout header {
+    border-block-end-width: 0;
+  }
+
+  td {
+    border-color: #666;
+  }
+
+  th {
+    color: #000;
+    background: transparent;
+    border: 1px solid #666;
+  }
+
+  th:last-child {
+    border-inline-end: 1px solid #666;
+  }
+}
+
+@page {
+  margin: 0.75in;
+}
+
+</style>
+</head>
   <body class="fontyourface layout-two-sidebars wide hff-05 pff-06 sff-06 slff-06 fixed-header-enabled slideout-side-right transparent-header-active path-node page-node-type-page" style="position: relative; min-height: 100%; top: 0px;">
         <a href="https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/licensing-process#main-content" class="visually-hidden focusable skip-link">
       Skip to main content
