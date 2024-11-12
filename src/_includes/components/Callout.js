@@ -12,15 +12,21 @@ function renderCallout (content, type = 'note', title) {
       break;
     case 'apply':
       icon = 'pen';
-      title = 'How to apply';
+      if (!title) {
+        title = 'How to apply';
+      }
       break;
     case 'warning':
       icon = 'exclamation-circle';
-      title = 'Warning';
+      if (!title) {
+        title = 'Warning';
+      }
       break;
     case 'note':
       icon = 'info-circle';
-      title = 'Note';
+      if (!title) {
+        title = 'Note';
+      }
   }
 
   let output = html`
