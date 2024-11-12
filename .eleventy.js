@@ -17,7 +17,6 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy('assets');
-  eleventyConfig.addPassthroughCopy("assets/**/*.svg");
 
   // Customize Markdown library and settings:
   eleventyConfig.setLibrary('md', markdownLibrary);

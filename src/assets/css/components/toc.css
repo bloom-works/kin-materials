@@ -19,6 +19,17 @@
 	margin-block-start: calc(var(--t-paragraph) / 2);
 }
 
+.dcyf-meta {
+	font-size: var(--t-small);
+	color: var(--c-secondary);
+	margin-block-start: var(--t-leading-rem);
+}
+
+.dcyf-meta p + p {
+	margin-block-start: 0.5rem;
+}
+
+
 @media screen and (min-width: 88rem) {
 	.toc {
 		position: sticky;

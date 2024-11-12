@@ -12,20 +12,38 @@
   <body>
     <header role="banner">
       <div class="l-wrapper">
-        <a href="/"><img src="{{ '/assets/images/logo.svg' | url }}" alt="DCYF Logo" /></a>
+        <a href="/">
+        {% include "logo.svg" %}
+        </a>
       </div>
     </header>
-      <div class="l-wrapper">
-        <h1>{{ title }}</h1>
-        <div class="l-sidebar">
-          <aside class="toc">
-            <h2 class="h4">Table of Contents</h2>
-            {{ content | toc | safe }}
-          </aside>
-            <section class="l-stack-basic {{ class }}">        
-              {{ content | safe }}
-            </section>
+    <div class="l-wrapper">
+      <h1>{{ title }}</h1>
+      <div class="l-sidebar">
+        <aside class="toc">
+          <h2 class="h4">Table of Contents</h2>
+          {{ content | toc | safe }}
+
+          <div class="dcyf-meta">
+            {% if idnumber %}
+              <p class="dcyf-id">Publication No. {{ idnumber }}</p>
+            {% endif %}
+            {% if timestamp %}
+              <p class="dcyf-timestamp">Last updated {{ timestamp }}</p>
+            {% endif %}
           </div>
-      </div>
+        </aside>
+          <section class="l-stack-basic {{ class }}">        
+            {{ content | safe }}
+          </section>
+        </div>
+    </div>
+    <footer>
+      <div class="l-wrapper">
+        <p>DCYF does not discriminate and provides equal access to its programs and services for all persons without regard to race, color, gender, religion, creed, marital status, national origin, sexual orientation, age, veteran’s status, or presence of any physical, sensory, or mental disability.</p>
+
+        <p>If you would like free copies of this publication in an alternative format or language, please contact DCYF Constituent Relations at 1-800-723-4831 or email <a href="mailto:communications@dcyf.wa.gov">communications@dcyf.wa.gov</a>.</p>
+      </div> 
+    </footer>
   </body>
 </html>

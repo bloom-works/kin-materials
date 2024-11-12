@@ -1,0 +1,11 @@
+footer {
+	font-size: var(--t-small);
+	background: var(--c-purple-100);
+	padding-block: var(--t-leading-rem);
+	margin-block-start: calc(var(--t-leading-rem) * 2);
+}
+
+footer .l-wrapper {
+	display: flex;
+	gap: var(--g-column-gap);
+}
