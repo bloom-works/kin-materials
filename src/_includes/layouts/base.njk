@@ -7,10 +7,14 @@
     <meta name="robots" content="noindex,nofollow">
     <title>{{ title }} | {{ site.name }}</title>
     <link rel="stylesheet" href="https://use.typekit.net/yss3fmc.css">
-    <link rel="stylesheet" href="{{ '/css/app.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/app.css' | url }}">
   </head>
   <body>
-    <div class="l-container">
+    <header role="banner">
+      <div class="l-wrapper">
+        <a href="/"><img src="{{ '/assets/images/logo.svg' | url }}" alt="DCYF Logo" /></a>
+      </div>
+    </header>
       <div class="l-wrapper">
         <h1>{{ title }}</h1>
         <div class="l-sidebar">
@@ -23,6 +27,5 @@
             </section>
           </div>
       </div>
-    </div>
   </body>
 </html>

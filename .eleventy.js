@@ -16,9 +16,8 @@ module.exports = function (eleventyConfig) {
     wrapperClass: 'l-stack'
   });
 
-  // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy('img');
-  eleventyConfig.addPassthroughCopy('css');
+  eleventyConfig.addPassthroughCopy('assets');
+  eleventyConfig.addPassthroughCopy("assets/**/*.svg");
 
   // Customize Markdown library and settings:
   eleventyConfig.setLibrary('md', markdownLibrary);
@@ -77,7 +76,7 @@ module.exports = function (eleventyConfig) {
       input: '.',
       includes: '_includes',
       data: '_data',
-      output: '_site'
+      output: 'dist'
     }
   };
 };

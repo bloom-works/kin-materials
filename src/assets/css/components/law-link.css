@@ -1,0 +1,9 @@
+.law-link {
+  display: inline-block;
+  word-break: keep-all;
+  background: var(--c-purple-100);
+  border-radius: 3rem;
+  padding: 0.25rem 0.5rem;
+  margin-block-start: 0.25rem;
+  margin-block-end: var(--t-leading-rem);
+}

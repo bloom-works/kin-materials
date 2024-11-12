@@ -1,0 +1,6 @@
+header[role="banner"] {
+	background: var(--c-purple-600);
+	display: flex;
+	color: #fff;
+	padding: 0.5rem;
+}
