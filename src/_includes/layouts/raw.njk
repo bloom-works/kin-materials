@@ -424,6 +424,14 @@ function googleTranslateElementInit() {
             <span>Kinship Caregivers</span>
           </a>
               </li>
+            {% if parent_page == "Payments and Reimbursements" %}
+            <li class="breadcrumb__item">
+        <span class="breadcrumb__item-separator fa fa-angle-right"></span>
+                  <a href="https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/resources">
+            <span>Kinship Caregiver Resources</span>
+          </a>
+              </li>
+            {% endif %}
           <li class="breadcrumb__item">
         <span class="breadcrumb__item-separator fa fa-angle-right"></span>
                   <a href="{{ parent_page_link }}">
@@ -504,14 +512,20 @@ function googleTranslateElementInit() {
               </li>
         {% endif %}
   
-        {% if parent_page == "Kinship Caregiver Resources" %}
+        {% if parent_page == "Kinship Caregiver Resources" or parent_page == "Payments and Reimbursements" %}
           <li class="menu-item menu-item menu-item--expanded menu-item--active-trail">
         <a href="https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/resources" data-drupal-link-system-path="node/4079">Kinship Caregiver Resources</a>
         <ul>
-          <li class="menu-item">
-            <a href="./payments.html" class="is-active" aria-current="page" data-drupal-link-system-path="node/4634">Financial Assistance</a>
-            </ul>
+          <li class="menu-item{% if parent_page == "Payments and Reimbursements" %} menu-item--expanded menu-item--active-trail{% endif %}">
+            <a href="./payments.html" {% if parent_page == "Kinship Caregiver Resources" %}class="is-active" aria-current="page"{% endif %} data-drupal-link-system-path="node/4634">Payments and Reimbursements</a>
+            {% if parent_page == "Payments and Reimbursements" %}
+            <ul>
+              <li class="menu-item menu-item--expanded menu-item--active-trail">
+                <a href="./payments-how.html" class="is-active" aria-current="page" data-drupal-link-system-path="node/4634">How to get payments</a>
               </li>
+            </ul>
+            {% endif %}
+          </li>
         {% else %}
                 <li class="menu-item">
         <a href="./payments.html" data-drupal-link-system-path="node/4079">Kinship Caregiver Resources</a>

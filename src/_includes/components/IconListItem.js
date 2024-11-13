@@ -33,7 +33,7 @@ function renderIconListItemYes (content, icon, color = "#999") {
   return html`
     <li>
       <svg style="fill: ${color};">
-        <use xlink:href="../bootstrap-icons.svg#${icon}"></use>
+        <use xlink:href="/bootstrap-icons.svg#${icon}"></use>
       </svg>
       ${text}
     </li>  
