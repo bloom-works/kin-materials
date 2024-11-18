@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: Content Pattern Library
+permalink: /pattern-library/
+templateEngineOverride: md,njk
+---
+
+## Buttons
+
+**Help button**
+
+{% Download "help" %}[Use this button to link to help documentation.](#){% endDownload %}
+
+**PDF download button**
+
+{% Download "pdf" %}[Use this button to link to PDFs.](https://www.dcyf.wa.gov/sites/default/files/forms/ProviderRegistrationForm.pdf){% endDownload %}
+
+**Web link button**
+
+{% Download %}[Use this button to link to external websites.](#){% endDownload %} 
+
+## Callouts
+
+**Callout ("How to apply")**
+
+{% Callout 'apply' %}Use this pattern to tell readers how to apply for programs.{% endCallout %}
+
+**Callout ("Note")**
+
+{% Callout %}Use this pattern to highlight important information and alerts.{% endCallout %}
+
+**Callout ("Warning")**
+
+{% Callout "warning" %}Use this pattern to warn readers of mandatory requirements, or actions with negative consequences.{% endCallout %}
+
+
+## Icon lists
+
+<ul class="icon-list">
+{% IconListItem "bank" %}Bank / Direct deposit icon{% endIconListItem %}
+{% IconListItem "mail" %}Mail icon{% endIconListItem %}
+{% IconListItem "online" %}Online icon{% endIconListItem %}
+{% IconListItem "phone" %}Phone icon{% endIconListItem %}
+{% IconListItem "pen" %}Physical signature icon{% endIconListItem %}
+{% IconListItem "yes" %}"Yes" icon{% endIconListItem %}
+{% IconListItem "no" %}"No" icon{% endIconListItem %}
+</ul>

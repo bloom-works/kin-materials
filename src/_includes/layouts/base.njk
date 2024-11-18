@@ -21,9 +21,10 @@
       <h1>{{ title }}</h1>
       <div class="l-sidebar">
         <aside class="toc">
+          {% if content | toc %}
           <h2 class="h4">Table of Contents</h2>
           {{ content | toc | safe }}
-
+          {% endif %}
           <div class="dcyf-meta">
             {% if idnumber %}
               <p class="dcyf-id">Publication No. {{ idnumber }}</p>
