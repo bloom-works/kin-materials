@@ -415,12 +415,14 @@ function googleTranslateElementInit() {
             <span>Foster Parenting &amp; Kinship Care</span>
           </a>
               </li>
+        {% if parent_page != "Kinship Caregivers" %}
           <li class="breadcrumb__item">
         <span class="breadcrumb__item-separator fa fa-angle-right"></span>
                   <a href="https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers">
             <span>Kinship Caregivers</span>
           </a>
               </li>
+        {% endif %}
             {% if parent_page == "Payments and Reimbursements" %}
             <li class="breadcrumb__item">
         <span class="breadcrumb__item-separator fa fa-angle-right"></span>
@@ -490,16 +492,13 @@ function googleTranslateElementInit() {
                 <li class="menu-item">
         <a href="https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/caring-for-relatives-child" data-drupal-link-system-path="node/4069">Caring for My Relative or Friend's Child</a>
               </li>
-        {% if parent_page == "Kinship Licensing" %}
+        {% if title == "Kinship licensing" %}
                         <li class="menu-item menu-item--expanded menu-item--active-trail">
-                          <a href="https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/licensing-process" data-drupal-link-system-path="node/4072">Kinship Licensing</a>
+                          <a href="./checklist.html" class="is-active" data-drupal-link-system-path="node/4072">Kinship Licensing</a>
         <!-- <a href="https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/licensing-process" data-drupal-link-system-path="node/4072">Kinship Licensing</a> -->
                                 <ul class="menu">
                     <li class="menu-item">
         <a href="https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/licensing-process/licensing-standards" data-drupal-link-system-path="node/4634">New Licensing Standards for Kinship Caregivers</a>
-              </li>
-              <li class="menu-item">
-        <a href="./checklist.html" class="is-active" aria-current="page" data-drupal-link-system-path="node/4634">Licensing Checklist</a>
               </li>
         </ul>
               </li>
