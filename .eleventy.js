@@ -17,6 +17,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy('assets');
+  eleventyConfig.addPassthroughCopy('src/admin');
+
 
   // Customize Markdown library and settings:
   eleventyConfig.setLibrary('md', markdownLibrary);
@@ -29,7 +31,7 @@ module.exports = function (eleventyConfig) {
 
   const md = require("markdown-it")({
     html: false,
-    breaks: true,
+    breaks: false,
     linkify: true,
   });
 

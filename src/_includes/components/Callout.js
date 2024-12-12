@@ -41,7 +41,7 @@ function renderCallout (content, type = 'note', title) {
     </section>
   `
   
-  return stripIndents`${output}`;
+  return `${output}`.replace((/  |\r\n|\n|\r/gm),"");
 }
 
 
