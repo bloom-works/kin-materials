@@ -30,7 +30,16 @@ SSPS will mail you paper invoices unless you sign up to receive them electronica
 
 You can access your invoice online through [Secure Access Washington (SAW)](https://secureaccess.wa.gov/myAccess/saw/select.do). In SAW, you’ll go to the SSPS Provider Portal. 
 
-{% Download "help" %}[Step-by-step instructions on how to register for SAW and the SSPS Provider Portal](https://www.dcyf.wa.gov/sites/default/files/pdf/ProviderPaymentsTraining.pdf){% endDownload %}
+
+<section class='download'>
+    <svg fill="currentColor">
+      <use xlink:href="../bootstrap-icons.svg#undefined"></use>
+    </svg>
+    [Step-by-step instructions on how to register for SAW and the SSPS Provider Portal](<>)
+</section>
+		    
+
+{% Download "help" %[](https://www.dcyf.wa.gov/sites/default/files/pdf/ProviderPaymentsTraining.pdf){% endDownload %}
 
 ##### 2. Claim your invoice
 
@@ -45,6 +54,7 @@ Check that the invoice dates match the dates each child was in your care. Count 
 {% IconListItem "mail" %}By mail to State of Washington, SSPS, PO Box 45889, Olympia, WA 98584-5889. Fill and sign the invoice, and make a copy for your records before you mail it.{% endIconListItem %}
 
 </ul>
+
 
 <section class='callout' data-type='note'>
 <header>
@@ -84,11 +94,12 @@ To sign up for direct deposit you must fill out 2 forms and submit them together
 You have 2 options for signing the forms: 
 
 <ul class="icon-list">
-{% IconListItem "online" %}E-sign [forms](https://ofm.wa.gov/it-systems/accounting-systems/statewide-vendorpayee-services) using Docusign{% endIconListItem %}
+{% IconListItem "online" %}E-sign \[forms](https://ofm.wa.gov/it-systems/accounting-systems/statewide-vendorpayee-services) using Docusign{% endIconListItem %}
 
 {% IconListItem "pen" %}Print and sign, then email [forms](https://www.dcyf.wa.gov/sites/default/files/pdf/ProviderPaymentsTraining.pdf) to [ProviderFileUnit@dshs.wa.gov](mailto:ProviderFileUnit@dshs.wa.gov){% endIconListItem %}
 
 </ul>
+
 
 <section class='callout' data-type='note'>
 <header>
