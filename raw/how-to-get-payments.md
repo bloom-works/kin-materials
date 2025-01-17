@@ -30,6 +30,7 @@ SSPS will mail you paper invoices unless you sign up to receive them electronica
 
 You can access your invoice online through [Secure Access Washington (SAW)](https://secureaccess.wa.gov/myAccess/saw/select.do). In SAW, you’ll go to the SSPS Provider Portal. 
 
+
 <section class='download'>
 <svg fill="currentColor">
 <use xlink:href="../bootstrap-icons.svg#question-circle"></use>
@@ -86,14 +87,28 @@ If you’d like your money deposited into your bank account, you can sign up for
 
 To sign up for direct deposit you must fill out 2 forms and submit them together: 
 
-{% Download "pdf" %}[Provider registration form](https://www.dcyf.wa.gov/sites/default/files/forms/ProviderRegistrationForm.pdf){% endDownload %} 
 
-{% Download "pdf" %}[Direct deposit form](https://www.dcyf.wa.gov/sites/default/files/forms/ProviderDirectDepositAuthorizationform.pdf){% endDownload %}
+<section class='download'>
+<svg fill="currentColor">
+<use xlink:href="../bootstrap-icons.svg#file-earmark-arrow-down"></use>
+</svg>
+<a href="https://www.dcyf.wa.gov/sites/default/files/forms/ProviderRegistrationForm.pdf">Provider registration form</a>
+</section>
+		    
+
+
+<section class='download'>
+<svg fill="currentColor">
+<use xlink:href="../bootstrap-icons.svg#file-earmark-arrow-down"></use>
+</svg>
+<a href="https://www.dcyf.wa.gov/sites/default/files/forms/ProviderDirectDepositAuthorizationform.pdf">Direct deposit form</a>
+</section>
+		    
 
 You have 2 options for signing the forms: 
 
 <ul class="icon-list">
-{% IconListItem "online" %}E-sign \\\\[forms](https://ofm.wa.gov/it-systems/accounting-systems/statewide-vendorpayee-services) using Docusign{% endIconListItem %}
+{% IconListItem "online" %}E-sign \\\\\[forms](https://ofm.wa.gov/it-systems/accounting-systems/statewide-vendorpayee-services) using Docusign{% endIconListItem %}
 
 {% IconListItem "pen" %}Print and sign, then email [forms](https://www.dcyf.wa.gov/sites/default/files/pdf/ProviderPaymentsTraining.pdf) to [ProviderFileUnit@dshs.wa.gov](mailto:ProviderFileUnit@dshs.wa.gov){% endIconListItem %}
 
