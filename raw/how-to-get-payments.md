@@ -32,10 +32,10 @@ You can access your invoice online through [Secure Access Washington (SAW)](http
 
 
 <section class='download'>
-    <svg fill="currentColor">
-      <use xlink:href="../bootstrap-icons.svg#undefined"></use>
-    </svg>
-    [Step-by-step instructions on how to register for SAW and the SSPS Provider Portal](<>)
+<svg fill="currentColor">
+<use xlink:href="../bootstrap-icons.svg#undefined"></use>
+</svg>
+Step-by-step instructions on how to register for SAW and the SSPS Provider Portal
 </section>
 		    
 
@@ -94,7 +94,7 @@ To sign up for direct deposit you must fill out 2 forms and submit them together
 You have 2 options for signing the forms: 
 
 <ul class="icon-list">
-{% IconListItem "online" %}E-sign \[forms](https://ofm.wa.gov/it-systems/accounting-systems/statewide-vendorpayee-services) using Docusign{% endIconListItem %}
+{% IconListItem "online" %}E-sign \\[forms](https://ofm.wa.gov/it-systems/accounting-systems/statewide-vendorpayee-services) using Docusign{% endIconListItem %}
 
 {% IconListItem "pen" %}Print and sign, then email [forms](https://www.dcyf.wa.gov/sites/default/files/pdf/ProviderPaymentsTraining.pdf) to [ProviderFileUnit@dshs.wa.gov](mailto:ProviderFileUnit@dshs.wa.gov){% endIconListItem %}
 
