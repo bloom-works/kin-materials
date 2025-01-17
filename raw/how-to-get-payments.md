@@ -46,7 +46,6 @@ Check that the invoice dates match the dates each child was in your care. Count 
 
 </ul>
 
-
 <section class='callout' data-type='note'>
 <header>
 <svg title='Note' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 16 16'>
@@ -85,12 +84,11 @@ To sign up for direct deposit you must fill out 2 forms and submit them together
 You have 2 options for signing the forms: 
 
 <ul class="icon-list">
-{% IconListItem "online" %}E-sign \\[forms](https://ofm.wa.gov/it-systems/accounting-systems/statewide-vendorpayee-services) using Docusign{% endIconListItem %}
+{% IconListItem "online" %}E-sign \\\[forms](https://ofm.wa.gov/it-systems/accounting-systems/statewide-vendorpayee-services) using Docusign{% endIconListItem %}
 
 {% IconListItem "pen" %}Print and sign, then email [forms](https://www.dcyf.wa.gov/sites/default/files/pdf/ProviderPaymentsTraining.pdf) to [ProviderFileUnit@dshs.wa.gov](mailto:ProviderFileUnit@dshs.wa.gov){% endIconListItem %}
 
 </ul>
-
 
 <section class='callout' data-type='note'>
 <header>
@@ -99,7 +97,7 @@ You have 2 options for signing the forms:
 </svg>
 <span>Note</span>
 </header>
-<div class='callout-inner'></div>
+<div class='callout-inner'>It takes 4-6 weeks to process all the forms and complete the direct deposit process.</div>
 </section>
 		    
 
