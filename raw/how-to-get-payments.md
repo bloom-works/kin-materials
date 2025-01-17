@@ -39,8 +39,6 @@ You can access your invoice online through [Secure Access Washington (SAW)](http
 </section>
 		    
 
-{% Download "help" %[](https://www.dcyf.wa.gov/sites/default/files/pdf/ProviderPaymentsTraining.pdf){% endDownload %}
-
 ##### 2. Claim your invoice
 
 Check that the invoice dates match the dates each child was in your care. Count every night that a child slept in your home. Then claim the invoice to get your payment. You have 3 options for how to claim invoices: 
