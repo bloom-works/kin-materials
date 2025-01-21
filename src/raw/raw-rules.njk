@@ -1,0 +1,66 @@
+---
+layout: layouts/raw.njk
+title: Kinship caregiver rules
+permalink: /raw/rules.html
+templateEngineOverride: md,njk
+parent_page: Kinship Caregiver Resources
+parent_page_link: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/resources
+sections:
+- title: Child health and safety
+  items:
+  - text: Food, clothing, shelter
+  - text: Conditions of the home
+  - text: Healthcare and medicine
+  - text: Supervision and monitoring
+  - text: Discipline and restraint
+  - text: Transportation
+  - text: Drugs, alcohol, and toxic items
+  - text: Weapons
+- title: Child wellbeing
+  items:
+  - text: Education
+  - text: Prudent parenting
+  - text: Visitation and family time
+  - text: Child's belongings
+  - text: Race, ethnicity, religion, culture
+  - text: Indian children
+  - text: LGBTQ+
+- title: Working with DCYF
+  items:
+  - text: Home study process
+  - text: Background checks
+  - text: What do I need permission for?
+  - text: What do I have to report?
+  - text: Case planning
+  - text: Confidentiality
+  - text: Complaints about DCYF
+  - text: CPS Investigations
+- title: Licensing process
+  items:
+  - text: License types
+  - text: License requirements
+  - text: Private and Tribal CPAs
+  - text: Renewals
+  - text: Denials and suspensions
+  - text: Exemptions
+  - text: Special circumstances
+  - text: Additional placements
+  - text: Hearings and appeals
+- title: Caregiver resources
+  items:
+  - text: Payments and reimbursements
+  - text: Respite care
+  - text: Training and services
+---
+
+Being a caregiver is hard work. DCYF is here to help you understand your responsibilities and help you fulfill them. These pages outline the legal requirements and rights of licensed kinship caregivers. Unlicensed kinship caregivers should also follow these guidelines.
+
+{% for section in sections %}
+### {{ section.title }}
+
+<div class="directory-row">
+{%- for item in section.items -%}
+	{%- DirectoryButton -%}{{ item.text }}{%- endDirectoryButton -%}
+{%- endfor -%}
+</div>
+{% endfor %}

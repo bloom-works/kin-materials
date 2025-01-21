@@ -3,6 +3,7 @@ const markdownLibrary = require('./markdown');
 
 const CalloutComponent = require('./src/_includes/components/Callout');
 const DefinitionComponent = require('./src/_includes/components/Definition');
+const DirectoryButtonComponent = require('./src/_includes/components/DirectoryButton');
 const DownloadComponent = require('./src/_includes/components/Download');
 const IconListItemComponent = require('./src/_includes/components/IconListItem');
 const LawLinkComponent = require('./src/_includes/components/LawLink');
@@ -25,6 +26,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPairedShortcode('Callout', CalloutComponent);
   eleventyConfig.addPairedShortcode('Definition', DefinitionComponent);
+  eleventyConfig.addPairedShortcode('DirectoryButton', DirectoryButtonComponent);
   eleventyConfig.addPairedShortcode('Download', DownloadComponent);
   eleventyConfig.addPairedShortcode('IconListItem', IconListItemComponent);
   eleventyConfig.addShortcode('LawLink', LawLinkComponent);
