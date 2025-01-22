@@ -10,6 +10,12 @@ function renderCallout (content, type = 'note', title) {
     case 'event':
       icon = 'calendar-week';
       break;
+    case 'related':
+      icon = 'file-text';
+      if (!title) {
+        title = 'Related content';
+      }
+      break;
     case 'apply':
       icon = 'pen';
       if (!title) {
