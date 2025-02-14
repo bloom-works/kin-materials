@@ -13,6 +13,9 @@ function renderDownload (content, type = "link") {
     case 'pdf':
       icon = 'file-earmark-arrow-down';
       break;
+    case 'word':
+      icon = 'file-earmark-word';
+      break;
     case 'help':
       icon = 'question-circle';
       break;

@@ -3,14 +3,15 @@ layout: layouts/raw.njk
 title: Kinship caregiver rules
 permalink: /raw/rules.html
 templateEngineOverride: md,njk
-parent_page: Kinship Caregiver Resources
-parent_page_link: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/resources
+parent_page: Kinship Caregivers
+parent_page_link: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers
 sections:
 - title: Child health and safety
   items:
   - text: Food, clothing, and shelter
   - text: Conditions of the home
   - text: Healthcare and medicine
+    link: ./healthcare-meds.html
   - text: Supervision and monitoring
   - text: Discipline and restraint
   - text: Transportation
@@ -60,7 +61,7 @@ Being a caregiver is hard work. DCYF is here to help you understand your respons
 
 <div class="directory-row">
 {%- for item in section.items -%}
-	{%- DirectoryButton -%}{{ item.text }}{%- endDirectoryButton -%}
+	{%- DirectoryButton item.link -%}{{ item.text }}{%- endDirectoryButton -%}
 {%- endfor -%}
 </div>
 {% endfor %}

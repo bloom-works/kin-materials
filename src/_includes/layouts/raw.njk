@@ -424,7 +424,7 @@ function googleTranslateElementInit() {
           </a>
               </li>
         {% endif %}
-            {% if parent_page == "Payments and Reimbursements" %}
+            {% if parent_page == "Payments and financial support" %}
             <li class="breadcrumb__item">
         <span class="breadcrumb__item-separator fa fa-angle-right"></span>
                   <a href="https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/resources">
@@ -509,25 +509,53 @@ function googleTranslateElementInit() {
               </li>
         {% endif %}
   
-        {% if parent_page == "Kinship Caregiver Resources" or parent_page == "Payments and Reimbursements" %}
+        {% if parent_page == "Kinship Caregiver Resources" or parent_page == "Payments and financial support" %}
           <li class="menu-item menu-item menu-item--expanded menu-item--active-trail">
         <a href="https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/resources" data-drupal-link-system-path="node/4079">Kinship Caregiver Resources</a>
         <ul>
-          <li class="menu-item{% if parent_page == "Payments and Reimbursements" %} menu-item--expanded menu-item--active-trail{% endif %}">
-            <a href="./payments.html" {% if parent_page == "Kinship Caregiver Resources" %}class="is-active" aria-current="page"{% endif %} data-drupal-link-system-path="node/4634">Payments and Reimbursements</a>
-            {% if parent_page == "Payments and Reimbursements" %}
+          <li class="menu-item{% if parent_page == "Payments and financial support" %} menu-item--expanded menu-item--active-trail{% endif %}">
+            <a href="./payments.html" {% if title == "Payments and financial support" %}class="is-active" aria-current="page"{% endif %} data-drupal-link-system-path="node/4634">Payments and financial support</a>
+            {% if parent_page == "Payments and financial support" %}
             <ul>
-              <li class="menu-item menu-item--expanded menu-item--active-trail">
-                <a href="./payments-how.html" class="is-active" aria-current="page" data-drupal-link-system-path="node/4634">How to get payments</a>
+              <li class="menu-item menu-item--active-trail">
+                <a href="./payments-invoices.html" {% if title == "Claim invoices online" %}class="is-active" {% endif %}aria-current="page" data-drupal-link-system-path="node/4634">Claim invoices online</a>
+              </li>
+              <li class="menu-item menu-item--active-trail">
+                <a href="./payments-foster-care.html" {% if title == "Get foster care payments" %}class="is-active" {% endif %}aria-current="page" data-drupal-link-system-path="node/4634">Get foster care payments</a>
+              </li>
+              <li class="menu-item menu-item--active-trail">
+                <a href="./payments-get-paid-back.html" {% if title == "Get paid back for approved costs" %}class="is-active" {% endif %}aria-current="page" data-drupal-link-system-path="node/4634">Get paid back for approved costs</a>
+              </li>
+              <li class="menu-item menu-item--active-trail">
+                <a href="./payments-tanf.html" {% if title == "Get federal cash assistance (TANF)" %}class="is-active" {% endif %}aria-current="page" data-drupal-link-system-path="node/4634">Get federal cash assistance (TANF)</a>
+              </li>
+              <li class="menu-item menu-item--active-trail">
+                <a href="./payments-ssps.html" {% if title == "Sign up for the SSPS Provider Portal" %}class="is-active" {% endif %}aria-current="page" data-drupal-link-system-path="node/4634">Sign up for the SSPS Provider Portal</a>
               </li>
             </ul>
             {% endif %}
           </li>
+        </ul>
+        </li>
         {% else %}
+        {% endif %}
+        <li class="menu-item {% if title == "Kinship caregiver rules" or parent_page =="Kinship caregiver rules" %}menu-item--expanded menu-item--active-trail{% endif %}">
+        <a href="./rules.html" {% if title == "Kinship caregiver rules" %}class="is-active"{% endif %} data-drupal-link-system-path="node/4079">Kinship Caregiver Rules</a>
+
+        {% if title == "Kinship caregiver rules" or parent_page =="Kinship caregiver rules" %}
+        <ul>
+          <li class="menu-item  menu-item--active-trail">
+            <a href="./healthcare-meds.html" {% if title == "Health care and medicine" %}class="is-active" aria-current="page"{% endif %} data-drupal-link-system-path="node/4634">Health care and medicine</a>
+          </li>
+          <li class="menu-item menu-item--active-trail">
+            <a href="./reporting-incidents.html" {% if title == "Reporting serious incidents" %}class="is-active"{% endif %} aria-current="page" data-drupal-link-system-path="node/4634">Reporting serious incidents</a>
+          </li>
+        </ul>
+      {% endif %}
+              </li>
                 <li class="menu-item">
         <a href="./payments.html" data-drupal-link-system-path="node/4079">Kinship Caregiver Resources</a>
               </li>
-        {% endif %}
                 <li class="menu-item">
         <a href="https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/kcoc" data-drupal-link-system-path="node/4074">Kinship Care Oversight Committee</a>
               </li>
