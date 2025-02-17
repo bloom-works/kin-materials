@@ -23,8 +23,8 @@ li .callout {
   padding-block: 0;
 }
 
-.callout li + li {
-  padding-block-start: 1em;
+.callout ul:not(.icon-list) li + li {
+  padding-block-start: 0.5rem;
 }
 
 .callout[data-type="warning"] {
