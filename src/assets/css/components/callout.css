@@ -44,6 +44,10 @@ li .callout {
   border: 1px solid var(--callout-accent);
 }
 
+.callout[data-type="related"] ul {
+  padding-inline-start: 2rem;
+}
+
 .callout header {
   background: var(--callout-header-bg);
   color: var(--callout-header-text);
