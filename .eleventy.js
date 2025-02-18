@@ -20,7 +20,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('src/admin');
 
-
   // Customize Markdown library and settings:
   eleventyConfig.setLibrary('md', markdownLibrary);
 
