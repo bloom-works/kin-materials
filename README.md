@@ -1,2 +1,2 @@
-### Kinship Materials HTML Prototypes
+### Kinship Materials HTML Prototype
 
