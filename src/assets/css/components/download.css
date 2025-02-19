@@ -48,8 +48,13 @@
 
 .download-group {
   --l-cluster-gap: 0.5rem;
+  margin-block-end: 1.5rem;
 }
 
 .download-group .download {
   margin: 0;
+}
+
+.download-group + .callout {
+  margin-block-start: 3rem;
 }

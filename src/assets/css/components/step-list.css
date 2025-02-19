@@ -1,0 +1,54 @@
+  .step-list {
+    counter-reset: steps;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    --bullet-color: var(--c-purple-100);
+    --border-width: 0.5rem;
+    margin-block-end: 3rem;
+  }
+
+  .step-list::after {
+    position: absolute;
+    content: "";
+    background: var(--bullet-color);
+    inline-size: var(--border-width);
+    border-radius: 0.25rem;
+    block-size: 100%;
+    inset-block: 0;
+    inset-inline-start: 2.375rem;
+  }
+
+  .step-list > li {
+    list-style: none;
+    counter-increment: steps;
+    position: relative;
+    padding-inline-start: 8rem;
+    padding-block-start: 1rem;
+    padding-block-end: 3rem;
+  }
+
+  .step-list > li:last-child {
+    padding-block-end: 0;
+  }
+
+  .step-list > li::before {
+    position: absolute;
+    z-index: 2;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 5rem;
+    block-size: 5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    content: counter(steps);
+    background: #fff;
+    color: var(--c-purple-600);
+    border: var(--border-width) solid var(--bullet-color);
+    font-size: 3rem;
+    line-height: 1;
+    border-radius: 50%;
+    font-variant-numeric: tabular-nums;
+  }
