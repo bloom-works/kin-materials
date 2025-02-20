@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: "assets/images"
+public_folder: "images"
+collections:
+  - name: "raw"
+    label: "Old Layout"
+    folder: "../raw/"
+    create: true
+    extension: html
+    format: yaml-frontmatter
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/raw.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "templateEnginer", name: "templateEngineOverride", widget: "hidden", default: "md,njk"}
+      - { label: "Parent page name", name: "parent_page", widget: "string"}
+      - { label: "Parent page URL", name: "parent_page_link", widget: "string"}
+      - { label: "Body", name: "body", widget: "markdown" }
+
