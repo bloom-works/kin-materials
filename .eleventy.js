@@ -17,6 +17,9 @@ module.exports = function (eleventyConfig) {
     wrapperClass: 'l-stack'
   });
 
+ eleventyConfig.setTemplateFormats("html,liquid,md,njk");
+
+
   eleventyConfig.addPassthroughCopy('assets');
   eleventyConfig.addPassthroughCopy('src/admin');
 
@@ -41,14 +44,6 @@ module.exports = function (eleventyConfig) {
   );
 
   return {
-    // Control which files Eleventy will process
-    // e.g.: *.md, *.njk, *.html, *.liquid
-    templateFormats: [
-      'md',
-      'njk',
-      'html',
-      'liquid'
-    ],
 
     // -----------------------------------------------------------------
     // If your site deploys to a subdirectory, change `pathPrefix`.
