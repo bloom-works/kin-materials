@@ -6,7 +6,7 @@ public_folder: "images"
 collections:
   - name: "raw"
     label: "Old Layout"
-    folder: "src/raw"
+    folder: "raw"
     create: true
     extension: html
     format: yaml-frontmatter
