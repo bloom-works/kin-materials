@@ -23,6 +23,8 @@ const getMeta = data => {
   }
 }
 
+const nameComma = name => `, "${name}"`;
+
 const callout = {
   id: "callout",
   label: "Callout",
@@ -61,17 +63,7 @@ const callout = {
     };
   },
   toBlock: function(data) {
-    return `
-<section class='callout' data-type='${data.type}'>
-<header>
-<svg title='${data.name || getMeta(data)["name"]}' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 16 16'>
-<use xlink:href='../bootstrap-icons.svg#${getMeta(data).icon}'></use>
-</svg>
-<span>${data.name || getMeta(data)["name"]}</span>
-</header>
-<div class='callout-inner'>${data.contents}</div>
-</section>
-    `;
+    return `{% Callout "${data.type}"${nameComma(data.name)} %}${data.contents}{% endCallout %}`;
   },
   toPreview: function(data) {
     return `

@@ -7,7 +7,7 @@ publish_mode: editorial_workflow
 collections:
   - name: "raw"
     label: "Old Layout"
-    folder: "raw"
+    folder: "src/raw"
     create: true
     extension: html
     format: yaml-frontmatter

@@ -47,14 +47,7 @@ const download = {
     };
   },
   toBlock: function(data) {
-    return `
-<section class='download'>
-<svg fill="currentColor">
-<use xlink:href="../bootstrap-icons.svg#${getIcon(data.type)}"></use>
-</svg>
-<a href="${data.link}">${data.contents}</a>
-</section>
-    `;
+    return `{% Download "${data.type}" %}[${data.contents}](${data.link}){% endDownload %}`;
   },
   toPreview: function(data) {
     return `
