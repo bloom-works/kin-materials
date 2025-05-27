@@ -11,9 +11,11 @@ collections:
     create: true
     extension: html
     format: yaml-frontmatter
+    preview_path: raw/{{slug}}
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/raw.njk" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "URL slug", name: "permalink", widget: "string", required: false, hint: "Leave this blank to generate the URL automatically."}
       - { label: "templateEnginer", name: "templateEngineOverride", widget: "hidden", default: "md,njk"}
       - { label: "Parent page name", name: "parent_page", widget: "string"}
       - { label: "Parent page URL", name: "parent_page_link", widget: "string"}
