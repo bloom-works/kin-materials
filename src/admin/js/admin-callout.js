@@ -3,24 +3,18 @@ const md = markdownIt();
 
 
 const getMeta = data => {
-  if (data.name) {
-    return { icon: 'info-circle', name: "hello" };
-  } else {
-    switch (data.type) {
-      case 'apply':
-        return { icon: 'pen', name: 'How to apply'};
-        break;
-      case 'warning':
-        return { icon: 'exclamation-circle', name: 'Warning' };
-        break;
-      case 'note':
-        return { icon: 'info-circle', name: 'Note' };
-        break;
-      case 'related':
-        return { icon: 'file-text', name: 'Related content' };
-        break;
-    } 
-  }
+  switch (data.type) {
+    case 'apply':
+      return { icon: 'pen', name: 'How to apply'};
+    case 'warning':
+      return { icon: 'exclamation-circle', name: 'Warning' };
+    case 'note':
+      return { icon: 'info-circle', name: 'Note' };
+    case 'related':
+      return { icon: 'file-text', name: 'Related content' };
+    default:
+      return { icon: 'info-circle', name: "hello" };
+  } 
 }
 
 const nameComma = name => `, "${name}"`;
@@ -43,7 +37,8 @@ const callout = {
       options: [
       	{ label: 'How to apply', value: 'apply'},
       	{ label: 'Note', value: 'note'},
-      	{ label: "Warning", value: 'warning'}
+      	{ label: "Warning", value: 'warning'},
+        { label: "Related content", value: 'related'}
       ]
     },
     {
@@ -63,7 +58,10 @@ const callout = {
     };
   },
   toBlock: function(data) {
-    return `{% Callout "${data.type}"${nameComma(data.name)} %}${data.contents}{% endCallout %}`;
+    return `
+{% Callout "${data.type}"${nameComma(data.name)} %}
+${data.contents}
+{% endCallout %}`;
   },
   toPreview: function(data) {
     return `
