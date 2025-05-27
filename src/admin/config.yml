@@ -20,12 +20,38 @@ collections:
       - { label: "Parent page name", name: "parent_page", widget: "string"}
       - { label: "Parent page URL", name: "parent_page_link", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "data"
-    label: "Site data"
-    folder: "src/_data"
+  - name: "rules"
+    label: "Kinship caregiver rules"
+    folder: "src/rules"
     create: false
-    extension: yml
-    format: yml
+    extension: html
+    format: yaml-frontmatter
+    editor:
+      preview: false
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/raw.njk" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "text" }
+      - { label: "URL slug", name: "permalink", widget: "string", required: false, hint: "Leave this blank to generate the URL automatically."}
+      - { label: "templateEnginer", name: "templateEngineOverride", widget: "hidden", default: "md,njk"}
+      - { label: "Parent page name", name: "parent_page", widget: "string"}
+      - { label: "Parent page URL", name: "parent_page_link", widget: "string"}
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Categories"
+        name: "links"
+        widget: "list"
+        label_singular: "a category"
+        fields:
+          - label: "Section title"
+            name: "sectionTitle"
+            widget: "string"
+          - label: "Pages"
+            name: "items"
+            widget: "list"
+            label_singular: "a page"
+            fields:
+              - label: "Link title"
+                name: "linkTitle"
+                widget: "string"
+              - label: "Link URL"
+                name: "linkUrl"
+                widget: "string"
