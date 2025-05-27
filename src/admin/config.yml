@@ -20,4 +20,12 @@ collections:
       - { label: "Parent page name", name: "parent_page", widget: "string"}
       - { label: "Parent page URL", name: "parent_page_link", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown" }
-
+  - name: "data"
+    label: "Site data"
+    folder: "src/_data"
+    create: false
+    extension: yml
+    format: yml
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "text" }

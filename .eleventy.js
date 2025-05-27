@@ -1,3 +1,5 @@
+const yaml = require('js-yaml');
+
 const pluginTOC = require('eleventy-plugin-nesting-toc');
 const markdownLibrary = require('./markdown');
 
@@ -10,6 +12,9 @@ const LawLinkComponent = require('./src/_includes/components/LawLink');
 
 
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
+
   // Add plugins
   eleventyConfig.addPlugin(pluginTOC, {
     tags: ['h2'],
