@@ -87,19 +87,22 @@ links:
         linkUrl: "#"
     sectionTitle: Caregiver resources
 ---
+
 Being a kinship caregiver is hard work. We are here to help you understand your responsibilities and help you fulfill them. These pages outline the legal requirements and rights of licensed kinship caregivers. Unlicensed kinship caregivers should also follow these guidelines.
 
-*We updated these rules on June 30, 2025.*\
-\
+*We updated these rules on June 30, 2025.*
+
 {% Callout "note", "Note" %}You must also follow all state and federal non-discrimination laws while you care for a kinship child or youth. This means you must support children and youth in care with dignity and respect regardless of their actual or perceived race, ethnicity, religion, culture, or sexual orientation, gender identity, and expression.{% endCallout %}
 
-{% for section in rules %}
+{# Don't edit below this line #}
 
-### {{ section.title }}
+{% for section in links %}
+
+### {{ section.sectionTitle }}
 
 <div class="directory-row">
 {%- for item in section.items -%}
-	{%- DirectoryButton item.link -%}{{ item.text }}{%- endDirectoryButton -%}
+	{%- DirectoryButton item.linkUrl -%}{{ item.linkTitle }}{%- endDirectoryButton -%}
 {%- endfor -%}
 </div>
 {% endfor %}
