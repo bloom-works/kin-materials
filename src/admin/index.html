@@ -12,14 +12,35 @@
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
     <script type="module">
-    	import Page from "./templates/page.js";
+    	const pageCss = `
+          body {
+              padding: 3rem;
+              box-sizing: border-box;
+          }
+      `;
+
+      const Page = createClass({
+        render: function() {
+          const entry = this.props.entry;
+
+          return h('div', {},
+            h('style', {}, pageCss),
+            h('div', { className: 'l-wrapper' },
+              h('h1', { className: 'title page-title' },
+                entry.getIn(['data', 'title'])
+              ),
+              h('div', {}, this.props.widgetFor('body'))
+            )
+          );
+        }
+      });
 
 
     	CMS.registerPreviewTemplate("raw", Page);
     	CMS.registerPreviewStyle("../assets/css/raw.css", { raw: false });
 
-    	import callout from "./js/callout.js";
-    	import download from "./js/download.js";
+    	import callout from "./js/admin-callout.js";
+    	import download from "./js/admin-download.js";
     	import iconList from "./js/iconList.js";
 
     	CMS.registerEditorComponent(callout);
