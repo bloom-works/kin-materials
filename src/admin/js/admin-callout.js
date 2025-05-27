@@ -49,7 +49,7 @@ const callout = {
       required: false
     }
   ],
-  pattern: /^\{%(-)? Callout \"([a-z]+)\"(?:, "(.+[a-z]+)\")? (-)?%}(.+?)\{%(-)? endCallout (-)?%\}/,
+  pattern: /^\{%(-)? Callout \"([a-z]+)\"(?:, "(.+[a-z]+)\")? (-)?%}([^]+?)\{%(-)? endCallout (-)?%\}/,
   fromBlock: function(match) {
     return {
       contents: match[5],
