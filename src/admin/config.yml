@@ -1,7 +1,8 @@
 publish_mode: editorial_workflow
-local_backend: true
 backend:
-  name: git-gateway
+  name: github
+  repo: bloom-works/kin-materials
+  branch: custom-nav
 site_url: https://dcyf-kin-materials.netlify.app
 display_url: https://dcyf-kin-materials.netlify.app
 media_folder: "assets/images"
