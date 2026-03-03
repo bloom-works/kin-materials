@@ -13,6 +13,8 @@ const LawLinkComponent = require('./src/_includes/components/LawLink');
 
 module.exports = function (eleventyConfig) {
 
+  eleventyConfig.addGlobalData("baseUrl", "/raw/");
+
   eleventyConfig.addDataExtension("yml", (contents) => yaml.load(contents));
 
   // Add plugins

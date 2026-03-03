@@ -1,27 +1,32 @@
 publish_mode: editorial_workflow
+local_backend: true
 backend:
-  name: github
-  repo: bloom-works/kin-materials
-  branch: main
+  name: git-gateway
 site_url: https://dcyf-kin-materials.netlify.app
 display_url: https://dcyf-kin-materials.netlify.app
 media_folder: "assets/images"
 public_folder: "images"
 collections:
   - name: "raw"
-    label: "Old Layout"
+    label: "Pages"
     folder: "src/raw"
     create: true
     extension: html
     format: yaml-frontmatter
     preview_path: raw/{{slug}}
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/raw.njk" }
+      - label: "Layout"
+        name: "layout"
+        widget: "select"
+        options:
+          - { label: "Old Layout (2025)", value: "layouts/raw.njk" }
+          - { label: "Become a foster parent", value: "layouts/rawBecome.njk" }
+          - { label: "Kinship caregivers", value: "layouts/rawKinship.njk" }
+          - { label: "Current foster parents", value: "layouts/rawCurrent.njk" }
+          - { label: "For all families and caregivers", value: "layouts/rawCurrent.njk" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "URL slug", name: "permalink", widget: "string", required: false, hint: "Leave this blank to generate the URL automatically."}
       - { label: "templateEnginer", name: "templateEngineOverride", widget: "hidden", default: "md,njk"}
-      - { label: "Parent page name", name: "parent_page", widget: "string"}
-      - { label: "Parent page URL", name: "parent_page_link", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "rules"
     label: "Kinship caregiver rules"
@@ -32,7 +37,15 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/raw.njk" }
+      - label: "Layout"
+        name: "layout"
+        widget: "select"
+        options:
+          - { label: "Old Layout (2025)", value: "layouts/raw.njk" }
+          - { label: "Become a foster parent", value: "layouts/rawBecome.njk" }
+          - { label: "Kinship caregivers", value: "layouts/rawKinship.njk" }
+          - { label: "Current foster parents", value: "layouts/rawCurrent.njk" }
+          - { label: "For all families and caregivers", value: "layouts/rawCurrent.njk" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "URL slug", name: "permalink", widget: "string", required: false, hint: "Leave this blank to generate the URL automatically."}
       - { label: "templateEnginer", name: "templateEngineOverride", widget: "hidden", default: "md,njk"}
@@ -45,7 +58,7 @@ collections:
         label_singular: "a category"
         fields:
           - label: "Section title"
-            name: "sectionTitle"
+            name: "bannerTitle"
             widget: "string"
           - label: "Pages"
             name: "items"
@@ -58,3 +71,83 @@ collections:
               - label: "Link URL"
                 name: "linkUrl"
                 widget: "string"
+  - name: "misc"
+    label: "Banner Title"
+    files:
+      - name: "bannerTitle"
+        label: "Banner title"
+        file: "src/_data/bannerTitle.yml"
+        fields:
+        - label: "Title"
+          name: "title"
+          widget: "string"
+  - name: "topNav"
+    label: "Top Navigation"
+    label_singular: "nav structure"
+    folder: "src/_data/topNav/"
+    create: false
+    extension: yml
+    format: yml
+    fields:
+    - label: "Title"
+      name: "title"
+      widget: string
+    - label: "Links"
+      name: "links"
+      widget: "list"
+      fields:
+        - label: "Link title"
+          name: "title"
+          widget: "string"
+        - label: "URL"
+          name: "url"
+          widget: "string"
+        - label: "Place a horizontal rule below this link"
+          name: "hrBelow"
+          widget: boolean
+          required: false
+  - name: "sideNav"
+    label: "Side Navigation"
+    label_singular: "nav structure"
+    folder: "src/_data/sideNav/"
+    create: true
+    extension: yml
+    format: yml
+    fields:
+    - label: "Section name"
+      name: "title"
+      widget: "string"
+    - label: "Pages"
+      name: "pages"
+      widget: "list"
+      fields: 
+        - label: "Title"
+          name: "title" 
+          widget: "string"
+        - label: "URL"
+          name: "url"
+          widget: "string"
+        - label: "Sub-pages"
+          name: "subPages"
+          widget: "list"
+          collapsed: true
+          required: false
+          fields:
+            - label: "Title"
+              name: "title"
+              widget: "string"
+            - label: "URL"
+              name: "url"
+              widget: "string"
+            - label: "Sub-sub-pages"
+              name: "subSubPages"
+              widget: "list"
+              collapsed: true
+              required: false
+              fields:
+                - label: "Title"
+                  name: "title"
+                  widget: "string"
+                - label: "URL"
+                  name: "url"
+                  widget: "string"
