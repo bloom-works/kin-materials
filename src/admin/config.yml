@@ -24,7 +24,7 @@ collections:
           - { label: "Become a foster parent", value: "layouts/rawBecome.njk" }
           - { label: "Kinship caregivers", value: "layouts/rawKinship.njk" }
           - { label: "Current foster parents", value: "layouts/rawCurrent.njk" }
-          - { label: "For all families and caregivers", value: "layouts/rawCurrent.njk" }
+          - { label: "For all families and caregivers", value: "layouts/rawAllCaregivers.njk" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "URL slug", name: "permalink", widget: "string", required: false, hint: "Leave this blank to generate the URL automatically."}
       - { label: "templateEnginer", name: "templateEngineOverride", widget: "hidden", default: "md,njk"}
