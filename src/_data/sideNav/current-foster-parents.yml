@@ -1,0 +1,30 @@
+title: Current Foster Parents
+pages:
+  - title: Foster parent roles and responsibilities
+    url: current-roles/
+    subPages:
+      - title: Health and safety
+        url: current-health-safety-example/
+        subSubPages:
+          - title: Health and safety sub-page example
+            url: current-health-safety-example/
+      - title: Everyday caregiving
+        url: current-everyday-caregiving-example/
+        subSubPages:
+          - title: Everyday caregiving sub-page example
+            url: current-everyday-caregiving-example/
+      - title: School, activities, and visits
+        url: current-school-activities-example/
+        subSubPages:
+          - title: School, activities, and visits sub-page example
+            url: current-school-activities-example/
+      - title: Supporting the child or youth’s identities
+        url: current-supporting-identities-example/
+        subSubPages:
+          - title: Supporting the child or youth’s identities sub-page example
+            url: current-supporting-identities-example/
+      - title: Licensing for foster care payments
+        url: current-licensing-example/
+        subSubPages:
+          - title: Licensing for foster care payments sub-page example
+            url: current-licensing-example/
