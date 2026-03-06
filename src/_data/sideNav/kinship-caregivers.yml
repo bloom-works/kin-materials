@@ -1,4 +1,4 @@
-title: Kinship Caregivers
+title: Kinship caregivers
 pages:
   - url: kinship-caregiver-roles
     subPages:
@@ -9,34 +9,34 @@ pages:
     url: kinship-caregiver-roles
     subPages:
       - title: Health and safety
-        url:   kin-health-safety-example
+        url: kin-health-safety-example
         subSubPages:
           - title: Health and safety sub-page example
             url: kin-health-safety-example
           - title: Health and safety sub-page 2 example
             url: kin-health-safety-example-two
       - title: Everyday caregiving
-        url:   kin-everyday-caregiving-example
+        url: kin-everyday-caregiving-example
         subSubPages:
           - title: Everyday caregiving sub-page example
             url: kin-everyday-caregiving-example
       - title: School, activities, and visits
-        url:   kin-school-activities-example
+        url: kin-school-activities-example
         subSubPages:
           - title: Schools, activities, and visits sub-page example
             url: kin-school-activities-example
       - title: Supporting the child or youth’s identities
-        url:   kin-supporting-identities-example
+        url: kin-supporting-identities-example
         subSubPages:
           - title: Supporting the child or youth’s identities sub-page example
             url: kin-supporting-identities-example
       - title: Maintaining your license
-        url:   maintaining-license-example
+        url: maintaining-license-example
         subSubPages:
           - title: Maintaining your license sub-page example
             url: maintaining-license-example
   - title: Kinship caregiver resources
-    url:   kinship-resources-example
+    url: kinship-resources-example
     subPages:
       - title: Resources example
-        url:   kinship-resources-example
+        url: kinship-resources-example
