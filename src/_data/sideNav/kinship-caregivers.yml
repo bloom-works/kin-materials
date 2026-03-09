@@ -2,8 +2,20 @@ title: Kinship caregivers
 pages:
   - url: kinship-caregiver-roles
     subPages:
-      - url: become-caregiver-example
-        title: Become a caregiver example
+      - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/payments/foster-care-payments/kinship-licensing
+        title: Kinship caregiver licensing agencies
+      - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/becoming-kinship-caregiver/caring-for-relatives-child
+        title: If you're interested in caring for a friend or relative's child
+      - title: If you got a relative search letter
+        url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/becoming-kinship-caregiver/relative-search
+      - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/becoming-kinship-caregiver/placement-requirements
+        title: Requirements to care for a child or youth
+      - title: Home study process for kinship caregivers
+        url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/becoming-kinship-caregiver/home-study-process
+      - url: https://dcyf-kin-materials.netlify.app/raw/background-checks/
+        title: Background checks for kinship caregivers
+      - url: https://dcyf-kin-materials.netlify.app/raw/the-first-two-months-of-placement/
+        title: The first two months of placement for kinship caregivers
     title: Become a kinship caregiver
   - title: Kinship caregiver roles and responsibilities
     url: kinship-caregiver-roles
