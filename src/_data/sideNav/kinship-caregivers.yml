@@ -12,7 +12,7 @@ pages:
         title: Requirements to care for a child or youth
       - title: Home study process for kinship caregivers
         url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/becoming-kinship-caregiver/home-study-process
-      - url: https://dcyf-kin-materials.netlify.app/raw/background-checks/
+      - url: background-checks-kin
         title: Background checks for kinship caregivers
       - url: https://dcyf-kin-materials.netlify.app/raw/the-first-two-months-of-placement/
         title: The first two months of placement for kinship caregivers
