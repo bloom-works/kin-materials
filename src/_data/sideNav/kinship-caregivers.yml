@@ -23,15 +23,35 @@ pages:
       - title: Health and safety
         url: kin-health-safety-example
         subSubPages:
-          - title: Health and safety sub-page example
-            url: kin-health-safety-example
-          - title: Health and safety sub-page 2 example
-            url: kin-health-safety-example-two
+          - title: Home conditions
+            url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/home-conditions
+          - title: Health and medicine
+            url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/health-meds
+          - title: Drugs and alcohol at home
+            url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/drugs-alcohol
+          - title: Weapons at home
+            url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/weapons
+          - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/report-incidents
+            title: Report health and safety incidents
+          - title: Report a missing child or youth
+            url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/report-incidents
       - title: Everyday caregiving
         url: kin-everyday-caregiving-example
         subSubPages:
-          - title: Everyday caregiving sub-page example
-            url: kin-everyday-caregiving-example
+          - title: Supervision and monitoring
+            url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/supervision-monitoring
+          - title: Prudent parenting
+            url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/prudent-parenting
+          - title: Working with the caseworker
+            url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/working-with-caseworker
+          - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/discipline-restraint
+            title: Discipline and restraint
+          - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/food-clothing
+            title: Food and clothing for the child or youth
+          - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/childs-belongings
+            title: Child or youth's belongings
+          - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/transportation
+            title: Transporting the child or youth
       - title: School, activities, and visits
         url: kin-school-activities-example
         subSubPages:
