@@ -3,9 +3,9 @@ pages:
   - title: Types of caregiving
     url: types-of-caregiving/
   - title: Payments and financial support
-    url: all-example
-  - title: Caregiver training & Alliance CaRES
-    url: all-example
+    url: https://dcyf-kin-materials.netlify.app/raw/financial-support/
+  - title: Caregiver training and Alliance CaRES
+    url: https://dcyf.wa.gov/services/foster-parenting/training
   - title: Support and resources
     url: all-example
   - title: Become a respite care provider
