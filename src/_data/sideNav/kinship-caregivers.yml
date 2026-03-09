@@ -55,18 +55,30 @@ pages:
       - title: School, activities, and visits
         url: kin-school-activities-example
         subSubPages:
-          - title: Schools, activities, and visits sub-page example
-            url: kin-school-activities-example
+          - title: Visitation and family time
+            url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/visitation-family-time
+          - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/education
+            title: Education
       - title: Supporting the child or youth’s identities
         url: kin-supporting-identities-example
         subSubPages:
-          - title: Supporting the child or youth’s identities sub-page example
-            url: kin-supporting-identities-example
+          - title: Race, ethnicity, religion, and culture
+            url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/race-ethnicity-religion-culture
+          - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/indian-children-youth
+            title: Indian children or youth
+          - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/lgbtq
+            title: LGBTQ+
       - title: Maintaining your license
         url: maintaining-license-example
         subSubPages:
-          - title: Maintaining your license sub-page example
-            url: maintaining-license-example
+          - title: Changes to your license
+            url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/payments/foster-care-payments/updating-kinship-license
+          - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/payments/foster-care-payments/license-renewals
+            title: Renewing and kinship license
+          - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/payments/foster-care-payments/license-denials-suspensions-revocations
+            title: Kinship license denials and revocations
+          - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/payments/foster-care-payments/hearings-appeals
+            title: Appeals
   - title: Kinship caregiver resources
     url: kinship-resources-example
     subPages:
