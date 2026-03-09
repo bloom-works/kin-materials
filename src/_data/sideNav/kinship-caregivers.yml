@@ -82,5 +82,7 @@ pages:
   - title: Kinship caregiver resources
     url: kinship-resources-example
     subPages:
-      - title: Resources example
-        url: kinship-resources-example
+      - title: Kinship caregiver trainings
+        url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/resources/training-services
+      - title: Kinship Navigator Program
+        url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/resources/support
