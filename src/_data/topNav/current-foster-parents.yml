@@ -1,20 +1,11 @@
 title: Current foster parents
 url: https://dcyf.wa.gov/services/foster-parenting/current-foster-parents
 links:
-  - title: Renewing Your License
+  - title: Foster parent roles and responsibilities
     url: https://dcyf.wa.gov/node/4056
-  - title: Foster Parent Resources
-    url: https://dcyf.wa.gov/node/4080
-  - title: Foster Care WAC Amendments
-    url: https://dcyf.wa.gov/node/4442
-    hrBelow: true
-  - title: Support & Resources
-    url: https://dcyf.wa.gov/node/4078
-  - title: Laws & Rules
-    url: https://dcyf.wa.gov/node/4077
+  - title: Payments and financial support
+    url: https://dcyf-kin-materials.netlify.app/raw/financial-support/
   - title: Caregiver Training and Alliance CaRES
     url: https://dcyf.wa.gov/node/4075
-  - title: Get Involved
-    url: https://dcyf.wa.gov/node/4076
-  - title: Caregiver Supports Project
-    url: https://dcyf.wa.gov/node/4331
+  - title: Support & Resources
+    url: https://dcyf.wa.gov/node/4078
