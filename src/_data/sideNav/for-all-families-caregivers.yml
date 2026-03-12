@@ -9,9 +9,9 @@ pages:
   - title: Support and resources
     url: all-example
   - title: Become a respite care provider
-    url: who-can-be-a-respite-care-provider
+    url: who-can-be-a-respite-care-provider/
     subPages:
-      - url: who-can-be-a-respite-care-provider
+      - url: who-can-be-a-respite-care-provider/
         title: Who can be a respite care provider
       - url: how-to-become-a-respite-care-provider/
         title: How to become a respite care provider
