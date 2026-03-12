@@ -123,7 +123,40 @@ layout: layouts/rawBase.njk
                 <h3>{{ sideNav["for-all-families-caregivers"].title }}</h3>
                 <ul class="clearfix menu">
                   {% for page in sideNav["for-all-families-caregivers"].pages %}
-                  <li class="menu-item"><a href="{{ baseUrl}}{{ page.url }}">{{ page.title }}</a></li>
+                    {% set isExpanded = false %}
+                    {% if page.subPages %}
+                      {% for subPage in page.subPages %}
+                        {% if title == subPage.title %}{% set isExpanded = true %}{% endif %}
+                        {% if subPage.subSubPages %}
+                          {% for subSubPage in subPage.subSubPages %}
+                           {% if title == subSubPage.title %}{% set isExpanded = true %}{% endif %}
+                          {% endfor %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+                    <li {% if isExpanded == false and title != page.title %}data-collapsed{% endif %} class="menu-item {% if isExpanded -%}menu-item--expanded{%- endif -%}"><a href="{{baseUrl}}{{ page.url }}">{{ page.title }}</a>
+                    {% if page.subPages %}
+                      <ul>
+                        {% for subPage in page.subPages  %}
+                          {% set subExpanded = false %}
+                            {% if subPage.subSubPages %}
+                              {% for subSubPage in subPage.subSubPages %}
+                               {% if title == subSubPage.title %}{% set subExpanded = true %}{% endif %}
+                              {% endfor %}
+                            {% endif %}
+                          <li {% if subExpanded == false and title != subPage.title %}data-collapsed{% endif %} class="menu-item {% if subExpanded -%}menu-item--expanded{%- endif -%}"><a href="{{baseUrl}}{{ subPage.url }}">{{ subPage.title }}</a>
+                          {% if subPage.subSubPages %}
+                            <ul>
+                              {% for subSubPage in subPage.subSubPages %}
+                                <li class="menu-item"><a href="{{baseUrl}}{{ subSubPage.url }}">{{ subSubPage.title }}</a></li>
+                              {% endfor %}
+                            </ul>
+                          {% endif %}
+                          </li>
+                        {% endfor  %}
+                      </ul>
+                    {% endif %}
+                    </li>
                   {% endfor %}
                 </ul>
               </nav>
