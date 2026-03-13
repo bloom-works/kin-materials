@@ -4,6 +4,19 @@ pages:
     url: types-of-caregiving/
   - title: Payments and financial support
     url: financial-support/
+    subPages:
+      - url: payments-licensed-caregivers.html
+        title: Monthly payments for licensed caregivers
+      - title: Request monthly payments online
+        url: payments-invoices.html
+      - url: types-of-financial-support.html
+        title: Other types of financial support for families
+      - url: payments-for-respite-care-providers/
+        title: Payments for respite care providers
+      - title: Get paid back for certain expenses
+        url: get-paid-back-for-certain-expenses/
+      - title: Get federal cash assistance (TANF)
+        url: payments-tanf
   - title: Caregiver training and Alliance CaRES
     url: https://dcyf.wa.gov/services/foster-parenting/training
   - title: Support and resources
