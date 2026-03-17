@@ -26,7 +26,7 @@ collections:
           - { label: "Current foster parents", value: "layouts/rawCurrent.njk" }
           - { label: "For all families and caregivers", value: "layouts/rawAllCaregivers.njk" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "URL slug", name: "permalink", widget: "string", required: false, hint: "Leave this blank to generate the URL automatically. If you fill in this field, make sure to add a slash (/) to the end. Note that custom URLs will break live preview links."}
+      - { label: "URL slug", name: "permalink", widget: "string", required: false, hint: "Leave this blank to generate the URL automatically. If you fill in this field, make sure to add a backslash (/) to the end. Note that custom URLs will break live preview links."}
       - { label: "templateEnginer", name: "templateEngineOverride", widget: "hidden", default: "md,njk"}
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "rules"
@@ -48,7 +48,7 @@ collections:
           - { label: "Current foster parents", value: "layouts/rawCurrent.njk" }
           - { label: "For all families and caregivers", value: "layouts/rawCurrent.njk" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "URL slug", name: "permalink", widget: "string", required: false, hint: "Leave this blank to generate the URL automatically. If you fill in this field, make sure to add a slash (/) or '.html' to the end. Note that custom URLs will break live preview links."}
+      - { label: "URL slug", name: "permalink", widget: "string", required: false, hint: "Leave this blank to generate the URL automatically. If you fill in this field, make sure to add a backslash (/) or '.html' to the end. Note that custom URLs will break live preview links."}
       - { label: "templateEnginer", name: "templateEngineOverride", widget: "hidden", default: "md,njk"}
       - { label: "Parent page name", name: "parent_page", widget: "string"}
       - { label: "Parent page URL", name: "parent_page_link", widget: "string"}
@@ -102,7 +102,7 @@ collections:
           widget: "string"
         - label: "URL"
           name: "url"
-          hint: "Omit the 'https://dcyf-kin-materials.netlify.app/raw/' at the beginning of the URL, and add a backslash (/) to the end."
+          hint: "When linking to other prototypes, omit the 'https://dcyf-kin-materials.netlify.app/raw/' at the beginning of the URL, and add a backslash (/) to the end."
           widget: "string"
         - label: "Place a horizontal rule below this link"
           name: "hrBelow"
@@ -128,6 +128,7 @@ collections:
           widget: "string"
         - label: "URL"
           name: "url"
+          hint: "When linking to other prototypes, omit the 'https://dcyf-kin-materials.netlify.app/raw/' at the beginning of the URL, and add a backslash (/) to the end."
           widget: "string"
         - label: "Sub-pages"
           name: "subPages"
@@ -140,6 +141,7 @@ collections:
               widget: "string"
             - label: "URL"
               name: "url"
+              hint: "When linking to other prototypes, omit the 'https://dcyf-kin-materials.netlify.app/raw/' at the beginning of the URL, and add a backslash (/) to the end."
               widget: "string"
             - label: "Sub-sub-pages"
               name: "subSubPages"
@@ -152,4 +154,5 @@ collections:
                   widget: "string"
                 - label: "URL"
                   name: "url"
+                  hint: "When linking to other prototypes, omit the 'https://dcyf-kin-materials.netlify.app/raw/' at the beginning of the URL, and add a backslash (/) to the end."
                   widget: "string"
