@@ -102,6 +102,7 @@ collections:
           widget: "string"
         - label: "URL"
           name: "url"
+          hint: "Omit the 'https://dcyf-kin-materials.netlify.app/raw/' at the beginning of the URL, and add a backslash (/) to the end."
           widget: "string"
         - label: "Place a horizontal rule below this link"
           name: "hrBelow"
