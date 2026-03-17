@@ -18,10 +18,10 @@ pages:
         title: The first two months of placement for kinship caregivers
     title: Become a kinship caregiver
   - title: Kinship caregiver roles and responsibilities
-    url: kinship-caregiver-roles
+    url: kinship-caregiver-roles/
     subPages:
       - title: Health and safety
-        url: kin-health-safety-example
+        url: kin-health-safety-example/
         subSubPages:
           - title: Home conditions
             url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/home-conditions
@@ -36,7 +36,7 @@ pages:
           - title: Report a missing child or youth
             url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/report-incidents
       - title: Everyday caregiving
-        url: kin-everyday-caregiving-example
+        url: kin-everyday-caregiving-example/
         subSubPages:
           - title: Supervision and monitoring
             url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/supervision-monitoring
@@ -53,14 +53,14 @@ pages:
           - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/transportation
             title: Transporting the child or youth
       - title: School, activities, and visits
-        url: kin-school-activities-example
+        url: kin-school-activities-example/
         subSubPages:
           - title: Visitation and family time
             url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/visitation-family-time
           - url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/education
             title: Education
       - title: Supporting the child or youth’s identities
-        url: kin-supporting-identities-example
+        url: kin-supporting-identities-example/
         subSubPages:
           - title: Race, ethnicity, religion, and culture
             url: https://dcyf.wa.gov/services/foster-parenting/kinship-caregivers/roles-responsibilities/race-ethnicity-religion-culture
