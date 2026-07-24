@@ -26,7 +26,7 @@ const iconList = {
 	    	minimal: true
 	    }
 	  ],
- 	pattern: /^<ul class="icon-list">(\r\n|\r|\n)(.*?)<\/ul>$/ms,
+ 	pattern: /^<ul class="icon-list">(\r\n|\r|\n)(.*?)<\/ul>$/,
   fromBlock: function(match) {
     return {
     	contactMethods: match[2]

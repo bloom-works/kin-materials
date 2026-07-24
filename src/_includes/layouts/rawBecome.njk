@@ -110,7 +110,7 @@ layout: layouts/rawBase.njk
             <div class="region region-content">
               <div id="block-tourismplus-page-title" class="clearfix block block-core block-page-title-block">
                 <div class="content raw-content-main">
-                  <h1 class="title page-title">{{ title }}</h1>
+                  {%- if hideTitle != true -%}<h1 class="title page-title">{{ title }}</h1>{%- endif -%}
 
                   {{ content | safe }}
                 </div>
@@ -121,7 +121,7 @@ layout: layouts/rawBase.njk
           <section class="sidebar__section sidebar-first clearfix">
             <div class="region region-sidebar-first">
               <nav role="navigation" class="clearfix block block-menu navigation menu--kinship-caregivers">
-                <h3>{{ sideNav["become-a-foster-parent"].title }}</h3>
+                <h3><a href='{{ sideNav["become-a-foster-parent"].url }}'>{{ sideNav["become-a-foster-parent"].title }}</a></h3>
                 <ul class="clearfix menu">
                   {% for page in sideNav["become-a-foster-parent"].pages %}
                     {% set isExpanded = false %}
