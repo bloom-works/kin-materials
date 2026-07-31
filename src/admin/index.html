@@ -22,10 +22,12 @@
         render: function() {
           const entry = this.props.entry;
 
+          const hideTitle = entry.getIn(['data', 'hideTitle']);
+
           return h('div', {},
             h('style', {}, pageCss),
             h('div', { className: 'l-wrapper' },
-              h('h1', { className: 'title page-title' },
+              !hideTitle && h('h1', { className: 'title page-title' },
                 entry.getIn(['data', 'title'])
               ),
               h('div', {}, this.props.widgetFor('body'))

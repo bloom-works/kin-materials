@@ -109,7 +109,7 @@ layout: layouts/rawBase.njk
             <div class="region region-content">
               <div id="block-tourismplus-page-title" class="clearfix block block-core block-page-title-block">
                 <div class="content raw-content-main">
-                  <h1 class="title page-title">{{ title }}</h1>
+                  {% if hideTitle != true %}<h1 class="title page-title">{{ title }}</h1>{% endif %}
 
                   {{ content | safe }}
                 </div>

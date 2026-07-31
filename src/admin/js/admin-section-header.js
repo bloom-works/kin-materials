@@ -30,7 +30,7 @@ const sectionHeader = {
 
   toPreview: function(data) {
     return `
-      <div class="section-header" style="background-image: url('${data.image}')">
+      <div class="section-header" style="--image: url('${data.image}')">
         <h2>${data.title}</h2>
       </div>
     `;
