@@ -1,0 +1,87 @@
+---
+layout: layouts/rawCurrent.njk
+title: Foster parent roles and responsibilities
+permalink: /raw/current-roles/
+templateEngineOverride: md,njk
+links:
+  - sectionTitle: Health and safety
+    items:
+      - linkTitle: Home conditions
+        linkUrl: #
+      - linkTitle: Health and medicine
+        linkUrl: #
+      - linkTitle: Hygiene at home
+        linkUrl: #
+      - linkTitle: Drugs, alcohol, and smoking at home
+        linkUrl: #
+      - linkTitle: Weapons at home
+        linkUrl: #
+      - linkTitle: Report health and safety incidents
+        linkUrl: #
+      - linkTitle: Report a missing child or youth
+        linkUrl: #
+      - linkTitle: Using phones and other devices safely
+        linkUrl: #
+  - sectionTitle: Everyday caregiving
+    items:
+      - linkTitle: Basic needs
+        linkUrl: #
+      - linkTitle: Babysitting
+        linkUrl: #
+      - linkTitle: Discipline and restraint
+        linkUrl: #
+      - linkTitle: Youth in extended foster care
+        linkUrl: #
+      - linkTitle: Children and youth’s belongings
+        linkUrl: #
+      - linkTitle: Confidentiality and record keeping
+        linkUrl: #
+      - linkTitle: Caring youth who are pregnant or parenting
+        linkUrl: #
+      - linkTitle: Transportation for children and youth
+        linkUrl: #
+  - sectionTitle: School, activities, and visits
+    items:
+      - linkTitle: Education
+        linkUrl: #
+      - linkTitle: Social and recreational activities
+        linkUrl: #
+      - linkTitle: Family time and other visits
+        linkUrl: #
+  - sectionTitle: Supporting the child or youth’s identities
+    items:
+      - linkTitle: Indian children or youth
+        linkUrl: #
+      - linkTitle: LGBTQ+ children or youth
+        linkUrl: #
+      - linkTitle: Race, ethnicity, religion, and culture
+        linkUrl: #
+  - sectionTitle: Licensing for foster care payments   
+    items:   
+      - linkTitle: Renewing a foster care license
+        linkUrl: #
+      - linkTitle: Training requirements
+        linkUrl: #
+      - linkTitle: Changes you must report
+        linkUrl: #
+      - linkTitle: What happens if you don't follow the licensing rules
+        linkUrl: #
+---
+
+{# Start of "don't edit this" section #}
+
+{% for section in links %}
+
+### {{ section.sectionTitle }}
+
+<div class="directory-row">
+{%- for item in section.items -%}
+  {%- DirectoryButton item.linkUrl -%}{{ item.linkTitle }}{%- endDirectoryButton -%}
+{%- endfor -%}
+</div>
+{% endfor %}
+
+{# End of "don't edit this" section #}
+
+
+

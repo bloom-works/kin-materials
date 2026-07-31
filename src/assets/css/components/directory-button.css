@@ -1,17 +1,29 @@
 .directory-button {
-	background: #006580;
-	color: #fff;
+	--bg: 146 58 127;
+	--color: 146 58 127;
+	background: rgb(var(--bg) / 0.1);
+	border: 1px solid rgb(var(--bg));
+	color: rgb(var(--color));
 	border-radius: 3px;
 	padding: 0.75rem 1.5rem;
 	display: flex;
-	align-content: center;
-	width: calc(50% - 0.75em);
+	align-items: center;
+	width: calc(33.333333% - 1.5em);
+	line-height: 1.25;
 }
 
-.directory-button:hover,
-.directory-button:focus {
-	color: #fff;
-	background: #853694;
+.directory-button:is(:hover, :active, :focus, :link) {
+	color: rgb(var(--color));
+}
+
+.directory-button:is(:hover, :focus-visible) {
+	box-shadow: 0 0 0 3px rgb(var(--bg));
+	background: rgb(var(--bg) / 0.15);
+	scale: 1.01;
+}
+
+.directory-button:active {
+	scale: 0.99;
 }
 
 .directory-row {

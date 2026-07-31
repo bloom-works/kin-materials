@@ -1,0 +1,79 @@
+---
+layout: layouts/rawKinship.njk
+title: Kinship caregiver roles and responsibilities
+permalink: /raw/kinship-caregiver-roles/
+templateEngineOverride: md,njk
+links:
+  - sectionTitle: Health and safety
+    items:
+      - linkTitle: Home conditions
+        linkUrl: #
+      - linkTitle: Health and medicine
+        linkUrl: #
+      - linkTitle: Drugs and alcohol at home
+        linkUrl: #
+      - linkTitle: Weapons at home
+        linkUrl: #
+      - linkTitle: Report health and safety incidents
+        linkUrl: #
+      - linkTitle: Report a missing child or youth
+        linkUrl: #
+  - sectionTitle: Everyday caregiving
+    items:
+      - linkTitle: Prudent parenting
+        linkUrl: #
+      - linkTitle: Working with a caseworker
+        linkUrl: #
+      - linkTitle: Discipline and restraint
+        linkUrl: #
+      - linkTitle: Food and clothing
+        linkUrl: #
+      - linkTitle: Child or youth’s belongings
+        linkUrl: #
+      - linkTitle: Transporting the child or youth
+        linkUrl: #
+      - linkTitle: Supervision and monitoring
+        linkUrl: #
+  - sectionTitle: School, activities, and visits
+    items:
+      - linkTitle: Education
+        linkUrl: #
+      - linkTitle: Visitation and family time
+        linkUrl: #
+  - sectionTitle: Supporting the child or youth’s identities
+    items:
+      - linkTitle: Race, ethnicity, religion, and culture
+        linkUrl: #
+      - linkTitle: Indian children or youth
+        linkUrl: #
+      - linkTitle: LGBTQ+ children or youth
+        linkUrl: #
+  - sectionTitle: Maintaining your license   
+    items:   
+      - linkTitle: Changes you must report
+        linkUrl: #
+      - linkTitle: Renewing a kinship license
+        linkUrl: #
+      - linkTitle: Kinship license denials and revocations
+        linkUrl: #
+      - linkTitle: Appeals
+        linkUrl: #
+---
+
+{# Start of "don't edit this" section #}
+
+{% for section in links %}
+
+### {{ section.sectionTitle }}
+
+<div class="directory-row">
+{%- for item in section.items -%}
+  {%- DirectoryButton item.linkUrl -%}{{ item.linkTitle }}{%- endDirectoryButton -%}
+{%- endfor -%}
+</div>
+{% endfor %}
+
+{# End of "don't edit this" section #}
+
+
+
