@@ -40,6 +40,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPairedShortcode('IconListItem', IconListItemComponent);
   eleventyConfig.addShortcode('LawLink', LawLinkComponent);
 
+  eleventyConfig.addShortcode("SectionHeader", function(title, image) {
+    return `
+      <header class="section-header" style="--image: url('${image}')">
+        <h2>${title}</h2>
+      </header>
+    `;
+  });
+
   const md = require("markdown-it")({
     html: false,
     breaks: false,

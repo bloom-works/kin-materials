@@ -25,13 +25,14 @@ collections:
           - { label: "Kinship caregivers", value: "layouts/rawKinship.njk" }
           - { label: "Current foster parents", value: "layouts/rawCurrent.njk" }
           - { label: "For all families and caregivers", value: "layouts/rawAllCaregivers.njk" }
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Page title", name: "title", widget: "string" }
+      - { label: "Hide title on site", name: "hideTitle", widget: "boolean", hint: "For section header pages."}
       - { label: "URL slug", name: "permalink", widget: "string", required: false, hint: "Leave this blank to generate the URL automatically. If you fill in this field, make sure to add a backslash (/) to the end. Note that custom URLs will break live preview links."}
       - { label: "templateEnginer", name: "templateEngineOverride", widget: "hidden", default: "md,njk"}
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "rules"
-    label: "Kinship caregiver rules"
-    folder: "src/rules"
+  - name: "linkPages"
+    label: "Link pages"
+    folder: "src/linkPages"
     create: false
     extension: html
     format: yaml-frontmatter
@@ -50,8 +51,8 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "URL slug", name: "permalink", widget: "string", required: false, hint: "Leave this blank to generate the URL automatically. If you fill in this field, make sure to add a backslash (/) or '.html' to the end. Note that custom URLs will break live preview links."}
       - { label: "templateEnginer", name: "templateEngineOverride", widget: "hidden", default: "md,njk"}
-      - { label: "Parent page name", name: "parent_page", widget: "string"}
-      - { label: "Parent page URL", name: "parent_page_link", widget: "string"}
+      - { label: "Parent page name", name: "parent_page", widget: "string", required: false}
+      - { label: "Parent page URL", name: "parent_page_link", widget: "string", required: false}
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Categories"
         name: "links"
@@ -92,6 +93,9 @@ collections:
     fields:
     - label: "Title"
       name: "title"
+      widget: string
+    - label: "URL"
+      name: "url"
       widget: string
     - label: "Links"
       name: "links"
